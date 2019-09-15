@@ -1,0 +1,56 @@
+18:33:45 **** Auto Build of configuration Debug for project ZynqMP_DRAM_Test ****
+make all 
+'Building file: ../src/xmt_common.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xmt_common.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xmt_common.d" -MT"src/xmt_common.o" -o "src/xmt_common.o" "../src/xmt_common.c"
+In file included from ../src/xmt_common.h:70:0,
+                 from ../src/xmt_common.c:53:
+../../standalone_bsp_0/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/xmt_common.c'
+' '
+'Building file: ../src/xmt_main.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xmt_main.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xmt_main.d" -MT"src/xmt_main.o" -o "src/xmt_main.o" "../src/xmt_main.c"
+In file included from ../src/xmt_common.h:70:0,
+                 from ../src/xmt_main.c:53:
+../../standalone_bsp_0/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/xmt_main.c'
+' '
+'Building file: ../src/xmt_read_eye.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xmt_read_eye.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xmt_read_eye.d" -MT"src/xmt_read_eye.o" -o "src/xmt_read_eye.o" "../src/xmt_read_eye.c"
+In file included from ../src/xmt_common.h:70:0,
+                 from ../src/xmt_read_eye.c:54:
+../../standalone_bsp_0/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/xmt_read_eye.c'
+' '
+'Building file: ../src/xmt_write_eye.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xmt_write_eye.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xmt_write_eye.d" -MT"src/xmt_write_eye.o" -o "src/xmt_write_eye.o" "../src/xmt_write_eye.c"
+In file included from ../src/xmt_common.h:70:0,
+                 from ../src/xmt_write_eye.c:54:
+../../standalone_bsp_0/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/xmt_write_eye.c'
+' '
+'Building target: ZynqMP_DRAM_Test.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/psu_cortexa53_0/lib -o "ZynqMP_DRAM_Test.elf"  ./src/xmt_common.o ./src/xmt_main.o ./src/xmt_read_eye.o ./src/xmt_write_eye.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ZynqMP_DRAM_Test.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size ZynqMP_DRAM_Test.elf  |tee "ZynqMP_DRAM_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118084	   7328	  20788	 146200	  23b18	ZynqMP_DRAM_Test.elf
+'Finished building: ZynqMP_DRAM_Test.elf.size'
+' '
+
+18:33:48 Build Finished (took 2s.585ms)
+

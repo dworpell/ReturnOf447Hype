@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Sun Sep 15 17:04:19 2019
+# Process ID: 26152
+# Current directory: C:/Users/Jennifer/Documents/CMU_Year_5/Fall_Semester/18643/ReturnOf447Hype/Lab1/Ultra96_Basic_System/Ultra96_Basic_System.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Jennifer/Documents/CMU_Year_5/Fall_Semester/18643/ReturnOf447Hype/Lab1/Ultra96_Basic_System/Ultra96_Basic_System.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Jennifer/Documents/CMU_Year_5/Fall_Semester/18643/ReturnOf447Hype/Lab1/Ultra96_Basic_System/Ultra96_Basic_System.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

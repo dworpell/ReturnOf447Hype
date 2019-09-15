@@ -1,0 +1,92 @@
+18:33:48 **** Auto Build of configuration Debug for project Periph_Test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:78:19: warning: unused variable 'psu_uart_0' [-Wunused-variable]
+    static XUartPs psu_uart_0;
+                   ^~~~~~~~~~
+At top level:
+../src/testperiph.c:78:19: warning: 'psu_uart_0' defined but not used [-Wunused-variable]
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xcsudma_intr_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xcsudma_intr_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xcsudma_intr_example.d" -MT"src/xcsudma_intr_example.o" -o "src/xcsudma_intr_example.o" "../src/xcsudma_intr_example.c"
+'Finished building: ../src/xcsudma_intr_example.c'
+' '
+'Building file: ../src/xcsudma_selftest_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xcsudma_selftest_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xcsudma_selftest_example.d" -MT"src/xcsudma_selftest_example.o" -o "src/xcsudma_selftest_example.o" "../src/xcsudma_selftest_example.c"
+'Finished building: ../src/xcsudma_selftest_example.c'
+' '
+'Building file: ../src/xiicps_selftest_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xiicps_selftest_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xiicps_selftest_example.d" -MT"src/xiicps_selftest_example.o" -o "src/xiicps_selftest_example.o" "../src/xiicps_selftest_example.c"
+'Finished building: ../src/xiicps_selftest_example.c'
+' '
+'Building file: ../src/xscugic_tapp_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xscugic_tapp_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xscugic_tapp_example.d" -MT"src/xscugic_tapp_example.o" -o "src/xscugic_tapp_example.o" "../src/xscugic_tapp_example.c"
+'Finished building: ../src/xscugic_tapp_example.c'
+' '
+'Building file: ../src/xspips_selftest_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspips_selftest_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xspips_selftest_example.d" -MT"src/xspips_selftest_example.o" -o "src/xspips_selftest_example.o" "../src/xspips_selftest_example.c"
+'Finished building: ../src/xspips_selftest_example.c'
+' '
+'Building file: ../src/xsysmonpsu_intr_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xsysmonpsu_intr_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xsysmonpsu_intr_example.d" -MT"src/xsysmonpsu_intr_example.o" -o "src/xsysmonpsu_intr_example.o" "../src/xsysmonpsu_intr_example.c"
+'Finished building: ../src/xsysmonpsu_intr_example.c'
+' '
+'Building file: ../src/xsysmonpsu_polled_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xsysmonpsu_polled_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xsysmonpsu_polled_example.d" -MT"src/xsysmonpsu_polled_example.o" -o "src/xsysmonpsu_polled_example.o" "../src/xsysmonpsu_polled_example.c"
+'Finished building: ../src/xsysmonpsu_polled_example.c'
+' '
+'Building file: ../src/xttcps_tapp_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xttcps_tapp_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xttcps_tapp_example.d" -MT"src/xttcps_tapp_example.o" -o "src/xttcps_tapp_example.o" "../src/xttcps_tapp_example.c"
+'Finished building: ../src/xttcps_tapp_example.c'
+' '
+'Building file: ../src/xuartps_intr_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_intr_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xuartps_intr_example.d" -MT"src/xuartps_intr_example.o" -o "src/xuartps_intr_example.o" "../src/xuartps_intr_example.c"
+'Finished building: ../src/xuartps_intr_example.c'
+' '
+'Building file: ../src/xuartps_polled_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_polled_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xuartps_polled_example.d" -MT"src/xuartps_polled_example.o" -o "src/xuartps_polled_example.o" "../src/xuartps_polled_example.c"
+'Finished building: ../src/xuartps_polled_example.c'
+' '
+'Building file: ../src/xwdtps_selftest_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xwdtps_selftest_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xwdtps_selftest_example.d" -MT"src/xwdtps_selftest_example.o" -o "src/xwdtps_selftest_example.o" "../src/xwdtps_selftest_example.c"
+'Finished building: ../src/xwdtps_selftest_example.c'
+' '
+'Building file: ../src/xzdma_selftest_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xzdma_selftest_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xzdma_selftest_example.d" -MT"src/xzdma_selftest_example.o" -o "src/xzdma_selftest_example.o" "../src/xzdma_selftest_example.c"
+'Finished building: ../src/xzdma_selftest_example.c'
+' '
+'Building file: ../src/xzdma_simple_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xzdma_simple_example.o" -I../../standalone_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/xzdma_simple_example.d" -MT"src/xzdma_simple_example.o" -o "src/xzdma_simple_example.o" "../src/xzdma_simple_example.c"
+'Finished building: ../src/xzdma_simple_example.c'
+' '
+'Building target: Periph_Test.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/psu_cortexa53_0/lib -o "Periph_Test.elf"  ./src/testperiph.o ./src/xcsudma_intr_example.o ./src/xcsudma_selftest_example.o ./src/xiicps_selftest_example.o ./src/xscugic_tapp_example.o ./src/xspips_selftest_example.o ./src/xsysmonpsu_intr_example.o ./src/xsysmonpsu_polled_example.o ./src/xttcps_tapp_example.o ./src/xuartps_intr_example.o ./src/xuartps_polled_example.o ./src/xwdtps_selftest_example.o ./src/xzdma_selftest_example.o ./src/xzdma_simple_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Periph_Test.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size Periph_Test.elf  |tee "Periph_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90796	   5992	  25864	 122652	  1df1c	Periph_Test.elf
+'Finished building: Periph_Test.elf.size'
+' '
+
+18:33:52 Build Finished (took 3s.754ms)
+
