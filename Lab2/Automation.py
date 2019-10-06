@@ -21,7 +21,7 @@ tilecount={		"Tr":0,
 				"Tm":0,
 				"Tn":0}
 				
-bufi_tests=[[],[2,"bufi"],[3,"bufi"]]#,[1,"bufi"],[2,"bufi"],[3,"bufi"]]
+bufi_tests=[[],[2,"bufi"],[1,"bufi"]]#,[1,"bufi"],[2,"bufi"],[3,"bufi"]]
 bufw_tests=[[],[2,"bufw"],[3,"bufw"]]#,[1,"bufw"],[2,"bufw"],[3,"bufw"]]
 bufo_tests=[[]]#,[1,"bufo"],[2,"bufo"]]#,[1,"bufw"],[2,"bufw"],[3,"bufw"]]
 args=[]
@@ -35,7 +35,6 @@ set_part xczu3eg-sbva484-1-e
 #Specify the clock we are aiming to meet (Defaulted to 10ns)
 create_clock -period %d
 set_directive_pipeline "convolve_kernel/to_b_section"
-set_directive_array_reshape -type complete -dim 1 "convolve_kernel" bufi
 """
 
 #arguments are (dimension, variable_name)
