@@ -64,7 +64,9 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 
 
   unsigned long to_b, ti_b, row_b, col_b;  
-  unsigned long i, j;
+  unsigned long i, j,k;
+  //DATA_T temp_arr[Tr][Tc][Tm];
+  DATA_T temp_bufo=0;
   i_section:for(i=0;i<K_wts;i++)
   {
     j_section:for(j=0;j<K_wts;j++)
@@ -76,15 +78,32 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		  to_b_section:for(to_b=0;to_b<Tm;to_b++)
           {
 			DATA_T temp=0;
+			temp_bufo=bufo[to_b][row_b][col_b];
 			ti_b_section:for(ti_b=0;ti_b<Tn;ti_b++)
             {
             	temp = temp + (bufw[to_b][ti_b][i][j] * bufi[ti_b][S_wts*row_b+i][S_wts*col_b+j]);
             }
 			//When this addition wasn't here, we had no problems
-			bufo[to_b][row_b][col_b]=bufo[to_b][row_b][col_b]+temp;
+			//temp_arr[to_b][row_b][col_b]=temp+temp_bufo;
+			bufo[to_b][row_b][col_b]=temp+temp_bufo;
+			//temp_bufo[to_b]=bufo[to_b][row_b][col_b];
+			//bufo[to_b][row_b][col_b]=pre_load+temp;
           }
         }
       }
+	  /*to_b_sections:for(to_b=0;to_b<Tm;to_b++)
+	        {
+		  	  row_b_sections:for(row_b=0;row_b<Tr;row_b++)
+	          {
+			  col_b_sections:for(col_b=0;col_b<Tc;col_b++)
+	            {
+	  			//When this addition wasn't here, we had no problems
+	  			bufo[to_b][row_b][col_b]=temp_arr[to_b][row_b][col_b];
+	  			//temp_bufo[to_b]=bufo[to_b][row_b][col_b];
+	  			//bufo[to_b][row_b][col_b]=pre_load+temp;
+	            }
+	          }
+	        }*/
     }
   }
 }
