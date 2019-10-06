@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bufi_load_195', kernel.cpp:84) on array 'bufi' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'bufi'." projectName="convolution" solutionName="solution4" date="2019-10-06T17:55:12.808-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bufi_load_147', kernel.cpp:84) on array 'bufi' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'bufi'." projectName="convolution" solutionName="solution4" date="2019-10-06T17:55:12.106-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bufi_load_99', kernel.cpp:84) on array 'bufi' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'bufi'." projectName="convolution" solutionName="solution4" date="2019-10-06T17:55:11.403-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bufi_load_51', kernel.cpp:84) on array 'bufi' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'bufi'." projectName="convolution" solutionName="solution4" date="2019-10-06T17:55:10.707-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bufi_load_3', kernel.cpp:84) on array 'bufi' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'bufi'." projectName="convolution" solutionName="solution4" date="2019-10-06T17:55:10.098-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,25 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -y -140 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 2 -y -300 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -y -150 -defaultsOSRD
+preplace inst rst_ps8_0_100M -pg 1 -lvl 3 -y -50 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -y -290 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 20 -160 310 -50 950 -180 1330
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 310J
+preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 1 1 310
+preplace netloc axi_smc_M00_AXI 1 0 5 10 -210 310J -230 950J -240 NJ -240 1620
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 2 2 NJ -170 1340J
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 4 30 -40 NJ -40 970J -150 1320
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 1 940
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 2 2 960 -160 NJ
+levelinfo -pg 1 -10 170 640 1150 1480 1640 -top -370 -bot 340
+"
+}
+{
+   "da_axi4_cnt":"2",
+   "da_bram_cntlr_cnt":"2",
+   "da_zynq_ultra_ps_e_cnt":"2"
+}

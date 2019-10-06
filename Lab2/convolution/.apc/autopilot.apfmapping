@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sdk.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\sdk.h"/>
+    <originFiles name="kernel.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\kernel.h"/>
+    <originFiles name="instance_lab3.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\instance_lab3.h"/>
+    <originFiles name="instance_lab2.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\instance_lab2.h"/>
+    <originFiles name="instance.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\instance.h"/>
+    <originFiles name="data.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\data.h"/>
+    <originFiles name="convolve.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\convolve.h"/>
+    <originFiles name="config.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\config.h"/>
+    <originFiles name="kernel.cpp" path="C:\vivado_projects\ReturnOf447Hype\Lab2\kernel.cpp"/>
+    <originFiles name="tempkernel.h" path="C:\vivado_projects\ReturnOf447Hype\Lab2\tempkernel.h"/>
+  </source>
+  <testbench>
+    <originFiles name="convolve.cpp" path="C:\vivado_projects\ReturnOf447Hype\Lab2\convolve.cpp"/>
+    <originFiles name="main.cpp" path="C:\vivado_projects\ReturnOf447Hype\Lab2\main.cpp"/>
+    <originFiles name="data.cpp" path="C:\vivado_projects\ReturnOf447Hype\Lab2\data.cpp"/>
+    <originFiles name="sdk.cpp" path="C:\vivado_projects\ReturnOf447Hype\Lab2\sdk.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

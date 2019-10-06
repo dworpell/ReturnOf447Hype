@@ -4,14 +4,193 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source B:/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
-INFO: [HLS 200-10] Running 'B:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'DanRW' on host 'desktop-v6ep0gr' (Windows NT_amd64 version 6.2) on Sat Oct 05 23:39:33 -0400 2019
-INFO: [HLS 200-10] In directory 'B:/hls/hls/H04-lab2'
-INFO: [HLS 200-10] Opening project 'B:/hls/hls/H04-lab2/convolution'.
-INFO: [HLS 200-10] Opening and resetting solution 'B:/hls/hls/H04-lab2/convolution/solution3'.
+source C:/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Jennifer' on host 'windows-a7ntbke' (Windows NT_amd64 version 6.2) on Sun Oct 06 17:59:18 -0400 2019
+INFO: [HLS 200-10] In directory 'C:/vivado_projects/ReturnOf447Hype/Lab2'
+INFO: [HLS 200-10] Opening project 'C:/vivado_projects/ReturnOf447Hype/Lab2/convolution'.
+INFO: [HLS 200-10] Opening and resetting solution 'C:/vivado_projects/ReturnOf447Hype/Lab2/convolution/solution4'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.539 ; gain = 17.707
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.539 ; gain = 17.707
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 104.359 ; gain = 19.527
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 104.617 ; gain = 19.785
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'to_b_section' (kernel.cpp:79) in function 'convolve_kernel' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'i_section' (kernel.cpp:71) in function 'convolve_kernel' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'ti_b_section' (kernel.cpp:83) in function 'convolve_kernel' completely with a factor of 48.
+INFO: [XFORM 203-101] Partitioning array 'bufi' (kernel.cpp:57) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bufw' (kernel.cpp:56) in dimension 2 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 131.785 ; gain = 46.953
+INFO: [XFORM 203-541] Flattening a loop nest 'col_b_section' (kernel.cpp:77:10) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'row_b_section' (kernel.cpp:75:8) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'j_section' (kernel.cpp:73:6) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'col_b_section' (kernel.cpp:77:10) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'row_b_section' (kernel.cpp:75:8) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'j_section' (kernel.cpp:73:6) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'col_b_section' (kernel.cpp:77:10) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'row_b_section' (kernel.cpp:75:8) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'j_section' (kernel.cpp:73:6) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'col_b_section' (kernel.cpp:77:10) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'row_b_section' (kernel.cpp:75:8) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'j_section' (kernel.cpp:73:6) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'col_b_section' (kernel.cpp:77:10) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'row_b_section' (kernel.cpp:75:8) in function 'convolve_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'j_section' (kernel.cpp:73:6) in function 'convolve_kernel'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 133.363 ; gain = 48.531
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'convolve_kernel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolve_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'j_section_col_b_section_to_b_section'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 252.
+INFO: [SCHED 204-61] Pipelining loop 'j_section_col_b_section_to_b_section'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 252.
+INFO: [SCHED 204-61] Pipelining loop 'j_section_col_b_section_to_b_section'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 252.
+INFO: [SCHED 204-61] Pipelining loop 'j_section_col_b_section_to_b_section'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 252.
+INFO: [SCHED 204-61] Pipelining loop 'j_section_col_b_section_to_b_section'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 252.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.181 seconds; current allocated memory: 97.192 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 4.564 seconds; current allocated memory: 116.232 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolve_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufw_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufi_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolve_kernel/bufo' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'convolve_kernel' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_fadd_32ns_32ns_32_5_full_dsp_1' to 'convolve_kernel_fbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_fmul_32ns_32ns_32_4_max_dsp_1' to 'convolve_kernel_fcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_mac_muladd_7ns_5ns_6ns_11_1_1' to 'convolve_kernel_mdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_mac_muladd_6ns_6ns_3ns_11_1_1' to 'convolve_kernel_meOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_mac_muladd_6ns_6ns_4ns_11_1_1' to 'convolve_kernel_mfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_mac_muladd_7ns_6ns_6ns_11_1_1' to 'convolve_kernel_mg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_mac_muladd_6ns_6ns_5ns_11_1_1' to 'convolve_kernel_mhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolve_kernel_mac_muladd_6ns_6ns_6ns_11_1_1' to 'convolve_kernel_mibs' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'convolve_kernel' is 34169, found 5 HDL expressions with this fanout: (1'b0 == ap_block_pp2_stage0_11001), (1'b0 == ap_block_pp3_stage0_11001), (1'b0 == ap_block_pp4_stage0_11001), (1'b0 == ap_block_pp1_stage0_11001), (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_fbkb': 49 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_fcud': 48 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_mdEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_meOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_mfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_mg8j': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_mhbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolve_kernel_mibs': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolve_kernel'.
+INFO: [HLS 200-111]  Elapsed time: 7.286 seconds; current allocated memory: 153.377 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:24 ; elapsed = 00:00:40 . Memory (MB): peak = 269.816 ; gain = 184.984
+INFO: [SYSC 207-301] Generating SystemC RTL for convolve_kernel.
+INFO: [VHDL 208-304] Generating VHDL RTL for convolve_kernel.
+INFO: [VLOG 209-307] Generating Verilog RTL for convolve_kernel.
+INFO: [HLS 200-112] Total elapsed time: 40.527 seconds; peak allocated memory: 153.377 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Oct  6 17:59:58 2019...

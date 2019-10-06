@@ -1,0 +1,23 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution4"/>
+    </name>
+    <project>
+        <value string="convolution"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xczu3eg:-sbva484:-1-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+        <library value="xilinx/zynquplus/zynquplus_fpv7" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="8" default="false"/>
+    </clockList>
+    <config>
+        <config_compile blackbox=""/>
+        <schedule model="convolve_kernel"/>
+    </config>
+</AutoPilot:solution>
+

@@ -45,10 +45,14 @@
 
 #include "instance.h"
 #include "convolve.h"
-#include "tempkernel.h"
+
 /*
  * Blocking parameters
  */
+#define Tr 31 // output row
+#define Tc 31 // output column
+#define Tm 48 // output depth
+#define Tn 48 // input depth
 
 void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],

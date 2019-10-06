@@ -1,0 +1,3 @@
+open_project convolution
+csim_design
+exit
