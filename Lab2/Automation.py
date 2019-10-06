@@ -6,24 +6,24 @@ import shutil
 import sys
 from math import floor as flr
 location_to_batch=os.getcwd()
-current_solution="solution3"
+current_solution="solution4"
 current_clock=10
-clocks_to_test=[10]
+clocks_to_test=[5]
 resourceNames=["BRAM_18K", "DSP48E", "FF", "LUT"]
 
-tiles_to_test={	"Tr":[3,4,5],
-				"Tc":[3,4,5],
-				"Tm":[1,2,3,4,5],
-				"Tn":[1,2,3,4,5]}
+tiles_to_test={	"Tr":[12],
+				"Tc":[12],
+				"Tm":[12],
+				"Tn":[4,6,8,10,12]}
 				
 tilecount={		"Tr":0,
 				"Tc":0,
 				"Tm":0,
 				"Tn":0}
 				
-bufi_tests=[[]]#,[1,"bufi"],[2,"bufi"],[3,"bufi"]]
-bufw_tests=[[]]#,[1,"bufw"],[2,"bufw"],[3,"bufw"]]
-bufo_tests=[[],[1,"bufo"],[2,"bufo"]]#,[1,"bufw"],[2,"bufw"],[3,"bufw"]]
+bufi_tests=[[],[2,"bufi"],[3,"bufi"]]#,[1,"bufi"],[2,"bufi"],[3,"bufi"]]
+bufw_tests=[[],[2,"bufw"],[3,"bufw"]]#,[1,"bufw"],[2,"bufw"],[3,"bufw"]]
+bufo_tests=[[]]#,[1,"bufo"],[2,"bufo"]]#,[1,"bufw"],[2,"bufw"],[3,"bufw"]]
 args=[]
 tcl_header="""#open project so we are actually modifying the project
 open_project convolution
@@ -34,7 +34,8 @@ open_solution -reset %s
 set_part xczu3eg-sbva484-1-e
 #Specify the clock we are aiming to meet (Defaulted to 10ns)
 create_clock -period %d
-set_directive_pipeline "convolve_kernel/i_section"
+set_directive_pipeline "convolve_kernel/to_b_section"
+set_directive_array_reshape -type complete -dim 1 "convolve_kernel" bufi
 """
 
 #arguments are (dimension, variable_name)
