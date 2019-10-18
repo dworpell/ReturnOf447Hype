@@ -1,0 +1,2204 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'zhaoz' on host 'zhao-pc' (Windows NT_amd64 version 6.2) on Sun Sep 22 09:35:07 -0400 2019
+INFO: [HLS 200-10] In directory 'D:/cmu/18643/18643_2019fall/lab2'
+INFO: [HLS 200-10] Opening project 'D:/cmu/18643/18643_2019fall/lab2/cnn'.
+INFO: [HLS 200-10] Opening solution 'D:/cmu/18643/18643_2019fall/lab2/cnn/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx/Vivado/2018.3/msys64/mingw64/bin/g++"
+   Compiling convolve.cpp_pre.cpp.tb.cpp
+   Compiling data.cpp_pre.cpp.tb.cpp
+   Compiling main.cpp_pre.cpp.tb.cpp
+   Compiling apatb_convolve_kernel.cpp
+   Compiling sdk.cpp_pre.cpp.tb.cpp
+   Compiling kernel.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+*********************
+**Running testbench**
+*********************
+
+K_tws=5; S_wts=1;
+R_ofm=2; C_ofm=2; M_ofm=4;
+(R_ifm)=6; (C_ifm)=6; N_ifm=48
+Tr=3; Tc=3; Tm=3; Tn=3
+
+Computing reference. . . .
+
+Testing and timing kernel. . . .
+
+BufO[0][0][0] = 19.438000 
+BufO[0][0][1] = 18.111898 
+BufO[0][0][2] = 14.037800 
+BufO[0][1][0] = 20.916603 
+BufO[0][1][1] = 16.516596 
+BufO[0][1][2] = 13.030499 
+BufO[0][2][0] = 14.954201 
+BufO[0][2][1] = 11.455500 
+BufO[0][2][2] = 11.494799 
+BufO[1][0][0] = 20.252403 
+BufO[1][0][1] = 16.281702 
+BufO[1][0][2] = 13.709902 
+BufO[1][1][0] = 20.425901 
+BufO[1][1][1] = 18.377502 
+BufO[1][1][2] = 13.360100 
+BufO[1][2][0] = 14.806903 
+BufO[1][2][1] = 13.469200 
+BufO[1][2][2] = 9.820999 
+BufO[2][0][0] = 17.132504 
+BufO[2][0][1] = 16.956303 
+BufO[2][0][2] = 12.684699 
+BufO[2][1][0] = 21.493698 
+BufO[2][1][1] = 17.858297 
+BufO[2][1][2] = 12.296499 
+BufO[2][2][0] = 15.326200 
+BufO[2][2][1] = 13.728399 
+BufO[2][2][2] = 9.439800 
+BufO[0][0][0] = 37.642387 
+BufO[0][0][1] = 37.078503 
+BufO[0][0][2] = 29.143091 
+BufO[0][1][0] = 40.571503 
+BufO[0][1][1] = 37.122601 
+BufO[0][1][2] = 29.160599 
+BufO[0][2][0] = 30.858503 
+BufO[0][2][1] = 26.902201 
+BufO[0][2][2] = 25.023792 
+BufO[1][0][0] = 37.634102 
+BufO[1][0][1] = 33.666298 
+BufO[1][0][2] = 28.139704 
+BufO[1][1][0] = 40.181194 
+BufO[1][1][1] = 37.924000 
+BufO[1][1][2] = 29.609997 
+BufO[1][2][0] = 30.083502 
+BufO[1][2][1] = 29.224998 
+BufO[1][2][2] = 22.592304 
+BufO[2][0][0] = 36.949799 
+BufO[2][0][1] = 36.016701 
+BufO[2][0][2] = 29.528193 
+BufO[2][1][0] = 40.227894 
+BufO[2][1][1] = 39.329899 
+BufO[2][1][2] = 30.253704 
+BufO[2][2][0] = 32.735401 
+BufO[2][2][1] = 30.232702 
+BufO[2][2][2] = 23.801300 
+BufO[0][0][0] = 56.706295 
+BufO[0][0][1] = 54.601292 
+BufO[0][0][2] = 43.020191 
+BufO[0][1][0] = 61.733513 
+BufO[0][1][1] = 57.639503 
+BufO[0][1][2] = 43.914692 
+BufO[0][2][0] = 48.244900 
+BufO[0][2][1] = 42.721394 
+BufO[0][2][2] = 38.052292 
+BufO[1][0][0] = 53.499081 
+BufO[1][0][1] = 48.859703 
+BufO[1][0][2] = 41.728004 
+BufO[1][1][0] = 57.108101 
+BufO[1][1][1] = 55.622883 
+BufO[1][1][2] = 44.464909 
+BufO[1][2][0] = 44.565105 
+BufO[1][2][1] = 44.709896 
+BufO[1][2][2] = 35.959389 
+BufO[2][0][0] = 57.047192 
+BufO[2][0][1] = 55.924595 
+BufO[2][0][2] = 45.446495 
+BufO[2][1][0] = 63.370495 
+BufO[2][1][1] = 62.101204 
+BufO[2][1][2] = 46.815605 
+BufO[2][2][0] = 51.954494 
+BufO[2][2][1] = 48.489197 
+BufO[2][2][2] = 38.663799 
+BufO[0][0][0] = 71.427986 
+BufO[0][0][1] = 70.743202 
+BufO[0][0][2] = 54.869495 
+BufO[0][1][0] = 77.432480 
+BufO[0][1][1] = 74.877083 
+BufO[0][1][2] = 57.939194 
+BufO[0][2][0] = 62.286213 
+BufO[0][2][1] = 56.632698 
+BufO[0][2][2] = 49.828598 
+BufO[1][0][0] = 69.536888 
+BufO[1][0][1] = 65.144997 
+BufO[1][0][2] = 54.898697 
+BufO[1][1][0] = 75.714027 
+BufO[1][1][1] = 73.945488 
+BufO[1][1][2] = 59.848301 
+BufO[1][2][0] = 58.380207 
+BufO[1][2][1] = 59.844296 
+BufO[1][2][2] = 48.856583 
+BufO[2][0][0] = 72.668900 
+BufO[2][0][1] = 71.879486 
+BufO[2][0][2] = 57.942986 
+BufO[2][1][0] = 80.572586 
+BufO[2][1][1] = 80.399094 
+BufO[2][1][2] = 60.431194 
+BufO[2][2][0] = 66.103889 
+BufO[2][2][1] = 64.179901 
+BufO[2][2][2] = 49.143700 
+BufO[0][0][0] = 89.464279 
+BufO[0][0][1] = 88.854073 
+BufO[0][0][2] = 71.506813 
+BufO[0][1][0] = 97.514702 
+BufO[0][1][1] = 95.258461 
+BufO[0][1][2] = 75.930397 
+BufO[0][2][0] = 77.007004 
+BufO[0][2][1] = 71.947701 
+BufO[0][2][2] = 62.757195 
+BufO[1][0][0] = 84.805199 
+BufO[1][0][1] = 83.703659 
+BufO[1][0][2] = 66.830711 
+BufO[1][1][0] = 91.861549 
+BufO[1][1][1] = 91.299088 
+BufO[1][1][2] = 73.745979 
+BufO[1][2][0] = 71.851517 
+BufO[1][2][1] = 74.285416 
+BufO[1][2][2] = 59.817570 
+BufO[2][0][0] = 88.775986 
+BufO[2][0][1] = 88.650703 
+BufO[2][0][2] = 73.258469 
+BufO[2][1][0] = 96.774170 
+BufO[2][1][1] = 98.227768 
+BufO[2][1][2] = 75.963181 
+BufO[2][2][0] = 79.655670 
+BufO[2][2][1] = 79.287674 
+BufO[2][2][2] = 62.880890 
+BufO[0][0][0] = 109.493156 
+BufO[0][0][1] = 108.828461 
+BufO[0][0][2] = 89.703209 
+BufO[0][1][0] = 114.740288 
+BufO[0][1][1] = 115.141449 
+BufO[0][1][2] = 93.531204 
+BufO[0][2][0] = 91.025887 
+BufO[0][2][1] = 87.592018 
+BufO[0][2][2] = 76.102806 
+BufO[1][0][0] = 104.168190 
+BufO[1][0][1] = 104.813271 
+BufO[1][0][2] = 84.287102 
+BufO[1][1][0] = 111.171829 
+BufO[1][1][1] = 111.405891 
+BufO[1][1][2] = 89.804482 
+BufO[1][2][0] = 86.365692 
+BufO[1][2][1] = 90.000221 
+BufO[1][2][2] = 71.951355 
+BufO[2][0][0] = 109.828285 
+BufO[2][0][1] = 110.870384 
+BufO[2][0][2] = 92.320023 
+BufO[2][1][0] = 117.677185 
+BufO[2][1][1] = 119.140274 
+BufO[2][1][2] = 94.008499 
+BufO[2][2][0] = 94.553673 
+BufO[2][2][1] = 95.097214 
+BufO[2][2][2] = 76.128777 
+BufO[0][0][0] = 128.476166 
+BufO[0][0][1] = 127.663063 
+BufO[0][0][2] = 103.107613 
+BufO[0][1][0] = 137.139908 
+BufO[0][1][1] = 136.388718 
+BufO[0][1][2] = 109.961998 
+BufO[0][2][0] = 107.434990 
+BufO[0][2][1] = 103.235741 
+BufO[0][2][2] = 88.086487 
+BufO[1][0][0] = 123.866249 
+BufO[1][0][1] = 123.861359 
+BufO[1][0][2] = 98.420700 
+BufO[1][1][0] = 132.194489 
+BufO[1][1][1] = 131.730545 
+BufO[1][1][2] = 104.580490 
+BufO[1][2][0] = 103.464905 
+BufO[1][2][1] = 106.774323 
+BufO[1][2][2] = 85.378456 
+BufO[2][0][0] = 128.800110 
+BufO[2][0][1] = 128.756683 
+BufO[2][0][2] = 106.302711 
+BufO[2][1][0] = 136.668045 
+BufO[2][1][1] = 138.457886 
+BufO[2][1][2] = 108.362701 
+BufO[2][2][0] = 108.637779 
+BufO[2][2][1] = 109.014229 
+BufO[2][2][2] = 86.269997 
+BufO[0][0][0] = 146.134720 
+BufO[0][0][1] = 145.814606 
+BufO[0][0][2] = 119.085732 
+BufO[0][1][0] = 156.945541 
+BufO[0][1][1] = 154.116135 
+BufO[0][1][2] = 124.378784 
+BufO[0][2][0] = 123.401382 
+BufO[0][2][1] = 117.671364 
+BufO[0][2][2] = 99.992867 
+BufO[1][0][0] = 140.775650 
+BufO[1][0][1] = 138.747330 
+BufO[1][0][2] = 110.007584 
+BufO[1][1][0] = 149.984329 
+BufO[1][1][1] = 146.928055 
+BufO[1][1][2] = 117.099701 
+BufO[1][2][0] = 117.759880 
+BufO[1][2][1] = 119.028038 
+BufO[1][2][2] = 94.429062 
+BufO[2][0][0] = 144.822754 
+BufO[2][0][1] = 144.162781 
+BufO[2][0][2] = 116.935936 
+BufO[2][1][0] = 152.120834 
+BufO[2][1][1] = 154.596619 
+BufO[2][1][2] = 120.494698 
+BufO[2][2][0] = 122.509270 
+BufO[2][2][1] = 120.259239 
+BufO[2][2][2] = 96.116989 
+BufO[0][0][0] = 165.747284 
+BufO[0][0][1] = 166.695633 
+BufO[0][0][2] = 135.846436 
+BufO[0][1][0] = 176.231064 
+BufO[0][1][1] = 173.151657 
+BufO[0][1][2] = 139.867783 
+BufO[0][2][0] = 138.082520 
+BufO[0][2][1] = 132.133881 
+BufO[0][2][2] = 112.500763 
+BufO[1][0][0] = 158.676147 
+BufO[1][0][1] = 160.671280 
+BufO[1][0][2] = 126.283272 
+BufO[1][1][0] = 167.896561 
+BufO[1][1][1] = 163.965683 
+BufO[1][1][2] = 132.288620 
+BufO[1][2][0] = 134.091049 
+BufO[1][2][1] = 133.205750 
+BufO[1][2][2] = 107.656982 
+BufO[2][0][0] = 163.008057 
+BufO[2][0][1] = 162.725922 
+BufO[2][0][2] = 131.150162 
+BufO[2][1][0] = 169.359314 
+BufO[2][1][1] = 173.211853 
+BufO[2][1][2] = 133.654617 
+BufO[2][2][0] = 136.688599 
+BufO[2][2][1] = 134.981018 
+BufO[2][2][2] = 109.294212 
+BufO[0][0][0] = 186.885422 
+BufO[0][0][1] = 187.221970 
+BufO[0][0][2] = 151.824814 
+BufO[0][1][0] = 198.063278 
+BufO[0][1][1] = 194.444138 
+BufO[0][1][2] = 155.668701 
+BufO[0][2][0] = 155.576996 
+BufO[0][2][1] = 149.784210 
+BufO[0][2][2] = 125.968987 
+BufO[1][0][0] = 178.733185 
+BufO[1][0][1] = 178.702850 
+BufO[1][0][2] = 141.896790 
+BufO[1][1][0] = 189.258011 
+BufO[1][1][1] = 185.636566 
+BufO[1][1][2] = 149.890808 
+BufO[1][2][0] = 150.547195 
+BufO[1][2][1] = 148.119797 
+BufO[1][2][2] = 120.687683 
+BufO[2][0][0] = 182.680115 
+BufO[2][0][1] = 180.981674 
+BufO[2][0][2] = 146.638992 
+BufO[2][1][0] = 190.526794 
+BufO[2][1][1] = 194.387451 
+BufO[2][1][2] = 148.810410 
+BufO[2][2][0] = 153.741974 
+BufO[2][2][1] = 151.437515 
+BufO[2][2][2] = 121.696915 
+BufO[0][0][0] = 205.755325 
+BufO[0][0][1] = 206.198990 
+BufO[0][0][2] = 165.294128 
+BufO[0][1][0] = 216.524612 
+BufO[0][1][1] = 211.360672 
+BufO[0][1][2] = 169.427979 
+BufO[0][2][0] = 171.129166 
+BufO[0][2][1] = 164.899612 
+BufO[0][2][2] = 137.805618 
+BufO[1][0][0] = 196.164124 
+BufO[1][0][1] = 195.263519 
+BufO[1][0][2] = 154.045288 
+BufO[1][1][0] = 205.385040 
+BufO[1][1][1] = 201.950241 
+BufO[1][1][2] = 162.271790 
+BufO[1][2][0] = 165.707809 
+BufO[1][2][1] = 161.320007 
+BufO[1][2][2] = 131.608414 
+BufO[2][0][0] = 201.392517 
+BufO[2][0][1] = 198.719299 
+BufO[2][0][2] = 161.889999 
+BufO[2][1][0] = 209.173630 
+BufO[2][1][1] = 213.121094 
+BufO[2][1][2] = 162.460419 
+BufO[2][2][0] = 167.829559 
+BufO[2][2][1] = 166.229324 
+BufO[2][2][2] = 133.145416 
+BufO[0][0][0] = 225.476318 
+BufO[0][0][1] = 228.186783 
+BufO[0][0][2] = 181.738159 
+BufO[0][1][0] = 237.489502 
+BufO[0][1][1] = 232.736267 
+BufO[0][1][2] = 186.787750 
+BufO[0][2][0] = 187.991180 
+BufO[0][2][1] = 181.176071 
+BufO[0][2][2] = 151.006592 
+BufO[1][0][0] = 215.620651 
+BufO[1][0][1] = 214.860352 
+BufO[1][0][2] = 169.530396 
+BufO[1][1][0] = 226.096771 
+BufO[1][1][1] = 222.358139 
+BufO[1][1][2] = 178.813507 
+BufO[1][2][0] = 181.226608 
+BufO[1][2][1] = 177.871231 
+BufO[1][2][2] = 144.194733 
+BufO[2][0][0] = 221.992310 
+BufO[2][0][1] = 222.081085 
+BufO[2][0][2] = 179.264893 
+BufO[2][1][0] = 232.524582 
+BufO[2][1][1] = 236.599121 
+BufO[2][1][2] = 181.538696 
+BufO[2][2][0] = 185.526199 
+BufO[2][2][1] = 184.713043 
+BufO[2][2][2] = 147.359116 
+BufO[0][0][0] = 246.211609 
+BufO[0][0][1] = 245.147095 
+BufO[0][0][2] = 196.021088 
+BufO[0][1][0] = 257.290466 
+BufO[0][1][1] = 251.491791 
+BufO[0][1][2] = 201.257065 
+BufO[0][2][0] = 201.728470 
+BufO[0][2][1] = 197.710541 
+BufO[0][2][2] = 162.458801 
+BufO[1][0][0] = 234.061249 
+BufO[1][0][1] = 232.490936 
+BufO[1][0][2] = 181.738007 
+BufO[1][1][0] = 244.630524 
+BufO[1][1][1] = 238.906998 
+BufO[1][1][2] = 192.906540 
+BufO[1][2][0] = 195.951523 
+BufO[1][2][1] = 192.489792 
+BufO[1][2][2] = 156.354904 
+BufO[2][0][0] = 243.232559 
+BufO[2][0][1] = 240.796326 
+BufO[2][0][2] = 193.415314 
+BufO[2][1][0] = 253.508804 
+BufO[2][1][1] = 256.203888 
+BufO[2][1][2] = 198.113693 
+BufO[2][2][0] = 202.968750 
+BufO[2][2][1] = 199.313736 
+BufO[2][2][2] = 160.042984 
+BufO[0][0][0] = 262.942261 
+BufO[0][0][1] = 261.883911 
+BufO[0][0][2] = 208.582108 
+BufO[0][1][0] = 273.228516 
+BufO[0][1][1] = 266.735046 
+BufO[0][1][2] = 212.593353 
+BufO[0][2][0] = 216.363846 
+BufO[0][2][1] = 211.191391 
+BufO[0][2][2] = 173.279800 
+BufO[1][0][0] = 250.576614 
+BufO[1][0][1] = 248.552124 
+BufO[1][0][2] = 194.847656 
+BufO[1][1][0] = 260.145264 
+BufO[1][1][1] = 254.694595 
+BufO[1][1][2] = 205.585403 
+BufO[1][2][0] = 210.446564 
+BufO[1][2][1] = 207.044662 
+BufO[1][2][2] = 167.947327 
+BufO[2][0][0] = 260.088715 
+BufO[2][0][1] = 259.268921 
+BufO[2][0][2] = 208.964981 
+BufO[2][1][0] = 270.656799 
+BufO[2][1][1] = 272.886047 
+BufO[2][1][2] = 212.876633 
+BufO[2][2][0] = 218.101196 
+BufO[2][2][1] = 214.080704 
+BufO[2][2][2] = 171.641006 
+BufO[0][0][0] = 280.806152 
+BufO[0][0][1] = 281.045532 
+BufO[0][0][2] = 222.978348 
+BufO[0][1][0] = 293.495331 
+BufO[0][1][1] = 286.576508 
+BufO[0][1][2] = 228.382904 
+BufO[0][2][0] = 230.825195 
+BufO[0][2][1] = 226.543518 
+BufO[0][2][2] = 184.616028 
+BufO[1][0][0] = 268.861603 
+BufO[1][0][1] = 267.992554 
+BufO[1][0][2] = 209.963654 
+BufO[1][1][0] = 280.689972 
+BufO[1][1][1] = 276.087555 
+BufO[1][1][2] = 221.055496 
+BufO[1][2][0] = 225.013412 
+BufO[1][2][1] = 221.712189 
+BufO[1][2][2] = 178.815308 
+BufO[2][0][0] = 277.533539 
+BufO[2][0][1] = 278.238678 
+BufO[2][0][2] = 224.042969 
+BufO[2][1][0] = 289.860840 
+BufO[2][1][1] = 292.922638 
+BufO[2][1][2] = 227.874863 
+BufO[2][2][0] = 233.737305 
+BufO[2][2][1] = 229.699921 
+BufO[2][2][2] = 184.580307 
+BufO[0][0][0] = 298.147125 
+BufO[0][0][1] = 299.592834 
+BufO[0][0][2] = 237.962326 
+BufO[0][1][0] = 312.772705 
+BufO[0][1][1] = 304.678680 
+BufO[0][1][2] = 243.472061 
+BufO[0][2][0] = 245.876892 
+BufO[0][2][1] = 239.407150 
+BufO[0][2][2] = 196.063019 
+BufO[1][0][0] = 287.168304 
+BufO[1][0][1] = 284.884521 
+BufO[1][0][2] = 224.061783 
+BufO[1][1][0] = 299.361755 
+BufO[1][1][1] = 294.480896 
+BufO[1][1][2] = 234.771301 
+BufO[1][2][0] = 241.884323 
+BufO[1][2][1] = 236.793625 
+BufO[1][2][2] = 191.345932 
+BufO[2][0][0] = 294.946869 
+BufO[2][0][1] = 295.025269 
+BufO[2][0][2] = 238.070175 
+BufO[2][1][0] = 307.846649 
+BufO[2][1][1] = 311.409607 
+BufO[2][1][2] = 242.934235 
+BufO[2][2][0] = 250.128403 
+BufO[2][2][1] = 244.723633 
+BufO[2][2][2] = 197.380493 
+BufO[0][0][0] = 17.875999 
+BufO[0][0][1] = 17.098597 
+BufO[0][0][2] = 13.627899 
+BufO[0][1][0] = 19.714798 
+BufO[0][1][1] = 17.333000 
+BufO[0][1][2] = 13.790797 
+BufO[0][2][0] = 14.039996 
+BufO[0][2][1] = 12.629798 
+BufO[0][2][2] = 11.156499 
+BufO[1][0][0] = 19.043898 
+BufO[1][0][1] = 16.063097 
+BufO[1][0][2] = 11.747101 
+BufO[1][1][0] = 18.532394 
+BufO[1][1][1] = 16.165802 
+BufO[1][1][2] = 14.592999 
+BufO[1][2][0] = 16.379705 
+BufO[1][2][1] = 14.421703 
+BufO[1][2][2] = 11.526101 
+BufO[2][0][0] = 17.352800 
+BufO[2][0][1] = 14.893902 
+BufO[2][0][2] = 12.799399 
+BufO[2][1][0] = 20.526596 
+BufO[2][1][1] = 17.655800 
+BufO[2][1][2] = 13.703000 
+BufO[2][2][0] = 16.739998 
+BufO[2][2][1] = 13.243399 
+BufO[2][2][2] = 10.182900 
+BufO[0][0][0] = 33.176392 
+BufO[0][0][1] = 33.304295 
+BufO[0][0][2] = 26.374598 
+BufO[0][1][0] = 35.992004 
+BufO[0][1][1] = 35.873100 
+BufO[0][1][2] = 27.908295 
+BufO[0][2][0] = 29.560396 
+BufO[0][2][1] = 26.495899 
+BufO[0][2][2] = 23.416599 
+BufO[1][0][0] = 36.843792 
+BufO[1][0][1] = 35.012905 
+BufO[1][0][2] = 25.233395 
+BufO[1][1][0] = 38.333790 
+BufO[1][1][1] = 34.602898 
+BufO[1][1][2] = 30.046598 
+BufO[1][2][0] = 32.237804 
+BufO[1][2][1] = 29.580097 
+BufO[1][2][2] = 23.842907 
+BufO[2][0][0] = 35.125099 
+BufO[2][0][1] = 33.133598 
+BufO[2][0][2] = 26.472397 
+BufO[2][1][0] = 38.749695 
+BufO[2][1][1] = 36.916283 
+BufO[2][1][2] = 28.956497 
+BufO[2][2][0] = 32.400902 
+BufO[2][2][1] = 27.701605 
+BufO[2][2][2] = 23.295200 
+BufO[0][0][0] = 51.938583 
+BufO[0][0][1] = 52.166397 
+BufO[0][0][2] = 40.271610 
+BufO[0][1][0] = 56.250813 
+BufO[0][1][1] = 55.671082 
+BufO[0][1][2] = 43.039478 
+BufO[0][2][0] = 46.627586 
+BufO[0][2][1] = 42.973103 
+BufO[0][2][2] = 36.636593 
+BufO[1][0][0] = 53.723701 
+BufO[1][0][1] = 52.851307 
+BufO[1][0][2] = 38.743999 
+BufO[1][1][0] = 58.690189 
+BufO[1][1][1] = 54.978699 
+BufO[1][1][2] = 45.763504 
+BufO[1][2][0] = 49.398685 
+BufO[1][2][1] = 45.634991 
+BufO[1][2][2] = 36.793312 
+BufO[2][0][0] = 51.724701 
+BufO[2][0][1] = 50.683907 
+BufO[2][0][2] = 38.963902 
+BufO[2][1][0] = 57.589504 
+BufO[2][1][1] = 55.442982 
+BufO[2][1][2] = 43.613693 
+BufO[2][2][0] = 48.764397 
+BufO[2][2][1] = 43.389912 
+BufO[2][2][2] = 35.803204 
+BufO[0][0][0] = 68.928864 
+BufO[0][0][1] = 68.906685 
+BufO[0][0][2] = 52.538410 
+BufO[0][1][0] = 72.896721 
+BufO[0][1][1] = 74.314171 
+BufO[0][1][2] = 58.074688 
+BufO[0][2][0] = 62.150574 
+BufO[0][2][1] = 59.454300 
+BufO[0][2][2] = 49.123390 
+BufO[1][0][0] = 70.864105 
+BufO[1][0][1] = 70.030403 
+BufO[1][0][2] = 51.997292 
+BufO[1][1][0] = 76.115784 
+BufO[1][1][1] = 75.015457 
+BufO[1][1][2] = 61.629494 
+BufO[1][2][0] = 65.300682 
+BufO[1][2][1] = 62.357792 
+BufO[1][2][2] = 49.790207 
+BufO[2][0][0] = 67.768616 
+BufO[2][0][1] = 67.880501 
+BufO[2][0][2] = 52.137505 
+BufO[2][1][0] = 76.606117 
+BufO[2][1][1] = 74.517586 
+BufO[2][1][2] = 58.719677 
+BufO[2][2][0] = 63.877808 
+BufO[2][2][1] = 60.609615 
+BufO[2][2][2] = 49.024200 
+BufO[0][0][0] = 85.618767 
+BufO[0][0][1] = 86.046188 
+BufO[0][0][2] = 66.648605 
+BufO[0][1][0] = 89.069527 
+BufO[0][1][1] = 93.581367 
+BufO[0][1][2] = 73.461586 
+BufO[0][2][0] = 74.928978 
+BufO[0][2][1] = 72.845612 
+BufO[0][2][2] = 60.934185 
+BufO[1][0][0] = 87.303299 
+BufO[1][0][1] = 87.786903 
+BufO[1][0][2] = 67.066399 
+BufO[1][1][0] = 93.711411 
+BufO[1][1][1] = 92.893463 
+BufO[1][1][2] = 78.115807 
+BufO[1][2][0] = 78.397293 
+BufO[1][2][1] = 77.832878 
+BufO[1][2][2] = 62.825996 
+BufO[2][0][0] = 83.497925 
+BufO[2][0][1] = 84.610779 
+BufO[2][0][2] = 67.911507 
+BufO[2][1][0] = 94.307541 
+BufO[2][1][1] = 93.002281 
+BufO[2][1][2] = 73.776276 
+BufO[2][2][0] = 77.833717 
+BufO[2][2][1] = 75.466301 
+BufO[2][2][2] = 62.298401 
+BufO[0][0][0] = 108.108345 
+BufO[0][0][1] = 110.068878 
+BufO[0][0][2] = 84.894821 
+BufO[0][1][0] = 109.656242 
+BufO[0][1][1] = 114.093674 
+BufO[0][1][2] = 92.296417 
+BufO[0][2][0] = 90.879356 
+BufO[0][2][1] = 89.455330 
+BufO[0][2][2] = 74.701675 
+BufO[1][0][0] = 108.665573 
+BufO[1][0][1] = 110.741798 
+BufO[1][0][2] = 84.727806 
+BufO[1][1][0] = 114.354370 
+BufO[1][1][1] = 115.025261 
+BufO[1][1][2] = 96.115601 
+BufO[1][2][0] = 94.318100 
+BufO[1][2][1] = 95.031487 
+BufO[1][2][2] = 76.916504 
+BufO[2][0][0] = 105.071213 
+BufO[2][0][1] = 105.546906 
+BufO[2][0][2] = 85.953903 
+BufO[2][1][0] = 114.879753 
+BufO[2][1][1] = 114.109200 
+BufO[2][1][2] = 90.533569 
+BufO[2][2][0] = 91.867020 
+BufO[2][2][1] = 92.074715 
+BufO[2][2][2] = 76.403198 
+BufO[0][0][0] = 126.726868 
+BufO[0][0][1] = 126.846092 
+BufO[0][0][2] = 97.650848 
+BufO[0][1][0] = 129.248123 
+BufO[0][1][1] = 132.458481 
+BufO[0][1][2] = 106.588432 
+BufO[0][2][0] = 108.383842 
+BufO[0][2][1] = 105.554115 
+BufO[0][2][2] = 86.495598 
+BufO[1][0][0] = 128.297089 
+BufO[1][0][1] = 128.175186 
+BufO[1][0][2] = 98.033897 
+BufO[1][1][0] = 134.464233 
+BufO[1][1][1] = 133.996307 
+BufO[1][1][2] = 110.039558 
+BufO[1][2][0] = 110.361694 
+BufO[1][2][1] = 110.475967 
+BufO[1][2][2] = 89.159012 
+BufO[2][0][0] = 123.864250 
+BufO[2][0][1] = 122.474121 
+BufO[2][0][2] = 99.641808 
+BufO[2][1][0] = 134.779739 
+BufO[2][1][1] = 133.105026 
+BufO[2][1][2] = 105.847496 
+BufO[2][2][0] = 108.450592 
+BufO[2][2][1] = 109.213440 
+BufO[2][2][2] = 88.990387 
+BufO[0][0][0] = 145.080475 
+BufO[0][0][1] = 146.545715 
+BufO[0][0][2] = 111.498886 
+BufO[0][1][0] = 148.870590 
+BufO[0][1][1] = 151.579971 
+BufO[0][1][2] = 120.763039 
+BufO[0][2][0] = 124.993027 
+BufO[0][2][1] = 120.874420 
+BufO[0][2][2] = 97.866600 
+BufO[1][0][0] = 146.954391 
+BufO[1][0][1] = 147.028336 
+BufO[1][0][2] = 111.446304 
+BufO[1][1][0] = 151.859818 
+BufO[1][1][1] = 151.856567 
+BufO[1][1][2] = 123.404465 
+BufO[1][2][0] = 125.591797 
+BufO[1][2][1] = 125.194962 
+BufO[1][2][2] = 102.010078 
+BufO[2][0][0] = 141.734894 
+BufO[2][0][1] = 139.948761 
+BufO[2][0][2] = 115.167183 
+BufO[2][1][0] = 153.000458 
+BufO[2][1][1] = 150.407578 
+BufO[2][1][2] = 119.842102 
+BufO[2][2][0] = 125.370003 
+BufO[2][2][1] = 125.169792 
+BufO[2][2][2] = 101.371681 
+BufO[0][0][0] = 162.465118 
+BufO[0][0][1] = 164.605301 
+BufO[0][0][2] = 125.396767 
+BufO[0][1][0] = 166.417542 
+BufO[0][1][1] = 168.455063 
+BufO[0][1][2] = 134.346176 
+BufO[0][2][0] = 138.955612 
+BufO[0][2][1] = 135.407532 
+BufO[0][2][2] = 108.990288 
+BufO[1][0][0] = 166.302307 
+BufO[1][0][1] = 166.122986 
+BufO[1][0][2] = 126.049873 
+BufO[1][1][0] = 169.620529 
+BufO[1][1][1] = 169.883636 
+BufO[1][1][2] = 137.249008 
+BufO[1][2][0] = 140.783005 
+BufO[1][2][1] = 139.350021 
+BufO[1][2][2] = 113.744179 
+BufO[2][0][0] = 160.451019 
+BufO[2][0][1] = 159.379150 
+BufO[2][0][2] = 130.928085 
+BufO[2][1][0] = 171.189148 
+BufO[2][1][1] = 167.719467 
+BufO[2][1][2] = 133.514206 
+BufO[2][2][0] = 140.595291 
+BufO[2][2][1] = 140.173508 
+BufO[2][2][2] = 113.588478 
+BufO[0][0][0] = 183.494644 
+BufO[0][0][1] = 185.251968 
+BufO[0][0][2] = 141.030884 
+BufO[0][1][0] = 187.971024 
+BufO[0][1][1] = 189.023514 
+BufO[0][1][2] = 151.464905 
+BufO[0][2][0] = 157.888611 
+BufO[0][2][1] = 153.245163 
+BufO[0][2][2] = 122.564392 
+BufO[1][0][0] = 186.280975 
+BufO[1][0][1] = 184.178589 
+BufO[1][0][2] = 141.203903 
+BufO[1][1][0] = 192.041153 
+BufO[1][1][1] = 190.790100 
+BufO[1][1][2] = 153.862930 
+BufO[1][2][0] = 158.508636 
+BufO[1][2][1] = 156.020126 
+BufO[1][2][2] = 126.596672 
+BufO[2][0][0] = 179.935379 
+BufO[2][0][1] = 178.439682 
+BufO[2][0][2] = 145.856308 
+BufO[2][1][0] = 192.626450 
+BufO[2][1][1] = 187.694244 
+BufO[2][1][2] = 150.157318 
+BufO[2][2][0] = 157.835876 
+BufO[2][2][1] = 156.968018 
+BufO[2][2][2] = 126.734383 
+BufO[0][0][0] = 201.325104 
+BufO[0][0][1] = 203.811127 
+BufO[0][0][2] = 156.548203 
+BufO[0][1][0] = 206.475266 
+BufO[0][1][1] = 206.168915 
+BufO[0][1][2] = 164.763214 
+BufO[0][2][0] = 172.392609 
+BufO[0][2][1] = 166.188278 
+BufO[0][2][2] = 133.323532 
+BufO[1][0][0] = 205.385086 
+BufO[1][0][1] = 203.534698 
+BufO[1][0][2] = 155.149811 
+BufO[1][1][0] = 210.443604 
+BufO[1][1][1] = 207.697388 
+BufO[1][1][2] = 167.660416 
+BufO[1][2][0] = 172.900864 
+BufO[1][2][1] = 169.646683 
+BufO[1][2][2] = 137.885956 
+BufO[2][0][0] = 199.304321 
+BufO[2][0][1] = 195.532928 
+BufO[2][0][2] = 159.323334 
+BufO[2][1][0] = 209.057144 
+BufO[2][1][1] = 204.193909 
+BufO[2][1][2] = 162.922211 
+BufO[2][2][0] = 172.793015 
+BufO[2][2][1] = 170.571548 
+BufO[2][2][2] = 138.123779 
+BufO[0][0][0] = 222.953461 
+BufO[0][0][1] = 228.027557 
+BufO[0][0][2] = 175.648102 
+BufO[0][1][0] = 228.155899 
+BufO[0][1][1] = 229.119614 
+BufO[0][1][2] = 184.728470 
+BufO[0][2][0] = 190.368591 
+BufO[0][2][1] = 185.417908 
+BufO[0][2][2] = 149.178207 
+BufO[1][0][0] = 225.568329 
+BufO[1][0][1] = 225.783310 
+BufO[1][0][2] = 173.081131 
+BufO[1][1][0] = 230.164688 
+BufO[1][1][1] = 230.160751 
+BufO[1][1][2] = 184.602081 
+BufO[1][2][0] = 190.942184 
+BufO[1][2][1] = 187.382477 
+BufO[1][2][2] = 152.121475 
+BufO[2][0][0] = 218.102692 
+BufO[2][0][1] = 216.835571 
+BufO[2][0][2] = 177.112213 
+BufO[2][1][0] = 230.341766 
+BufO[2][1][1] = 224.764313 
+BufO[2][1][2] = 180.879059 
+BufO[2][2][0] = 189.816376 
+BufO[2][2][1] = 189.440964 
+BufO[2][2][2] = 152.447006 
+BufO[0][0][0] = 243.605133 
+BufO[0][0][1] = 246.504837 
+BufO[0][0][2] = 191.296768 
+BufO[0][1][0] = 248.366714 
+BufO[0][1][1] = 248.409714 
+BufO[0][1][2] = 199.817657 
+BufO[0][2][0] = 208.471283 
+BufO[0][2][1] = 202.161514 
+BufO[0][2][2] = 161.424423 
+BufO[1][0][0] = 246.115616 
+BufO[1][0][1] = 245.965988 
+BufO[1][0][2] = 187.771912 
+BufO[1][1][0] = 251.173340 
+BufO[1][1][1] = 250.706329 
+BufO[1][1][2] = 200.458984 
+BufO[1][2][0] = 208.150284 
+BufO[1][2][1] = 204.047516 
+BufO[1][2][2] = 165.389648 
+BufO[2][0][0] = 239.391022 
+BufO[2][0][1] = 236.036118 
+BufO[2][0][2] = 192.621918 
+BufO[2][1][0] = 250.259613 
+BufO[2][1][1] = 243.899506 
+BufO[2][1][2] = 196.062744 
+BufO[2][2][0] = 205.907471 
+BufO[2][2][1] = 206.189545 
+BufO[2][2][2] = 166.515121 
+BufO[0][0][0] = 262.539612 
+BufO[0][0][1] = 264.460693 
+BufO[0][0][2] = 206.297852 
+BufO[0][1][0] = 266.691467 
+BufO[0][1][1] = 266.134094 
+BufO[0][1][2] = 214.586685 
+BufO[0][2][0] = 222.344055 
+BufO[0][2][1] = 216.493164 
+BufO[0][2][2] = 173.366638 
+BufO[1][0][0] = 264.695953 
+BufO[1][0][1] = 263.616547 
+BufO[1][0][2] = 203.364761 
+BufO[1][1][0] = 270.675873 
+BufO[1][1][1] = 270.612213 
+BufO[1][1][2] = 214.400162 
+BufO[1][2][0] = 223.064941 
+BufO[1][2][1] = 219.862808 
+BufO[1][2][2] = 177.971405 
+BufO[2][0][0] = 257.120941 
+BufO[2][0][1] = 255.390961 
+BufO[2][0][2] = 209.112030 
+BufO[2][1][0] = 266.857361 
+BufO[2][1][1] = 260.638031 
+BufO[2][1][2] = 210.149261 
+BufO[2][2][0] = 221.077881 
+BufO[2][2][1] = 221.214340 
+BufO[2][2][2] = 178.887283 
+BufO[0][0][0] = 280.915680 
+BufO[0][0][1] = 284.284180 
+BufO[0][0][2] = 221.579712 
+BufO[0][1][0] = 285.453461 
+BufO[0][1][1] = 285.877136 
+BufO[0][1][2] = 229.258667 
+BufO[0][2][0] = 235.831818 
+BufO[0][2][1] = 232.928696 
+BufO[0][2][2] = 184.639771 
+BufO[1][0][0] = 284.410309 
+BufO[1][0][1] = 283.107635 
+BufO[1][0][2] = 217.392151 
+BufO[1][1][0] = 290.342987 
+BufO[1][1][1] = 290.202484 
+BufO[1][1][2] = 230.709381 
+BufO[1][2][0] = 238.979141 
+BufO[1][2][1] = 236.083878 
+BufO[1][2][2] = 190.787476 
+BufO[2][0][0] = 275.814941 
+BufO[2][0][1] = 275.046631 
+BufO[2][0][2] = 223.986618 
+BufO[2][1][0] = 286.599304 
+BufO[2][1][1] = 280.412567 
+BufO[2][1][2] = 226.677780 
+BufO[2][2][0] = 236.727081 
+BufO[2][2][1] = 237.172424 
+BufO[2][2][2] = 191.295441 
+BufO[0][0][0] = 298.770477 
+BufO[0][0][1] = 301.641968 
+BufO[0][0][2] = 234.822906 
+BufO[0][1][0] = 303.573761 
+BufO[0][1][1] = 304.417694 
+BufO[0][1][2] = 242.750793 
+BufO[0][2][0] = 250.596451 
+BufO[0][2][1] = 248.004913 
+BufO[0][2][2] = 196.085892 
+BufO[1][0][0] = 302.717010 
+BufO[1][0][1] = 299.999603 
+BufO[1][0][2] = 231.490280 
+BufO[1][1][0] = 309.014771 
+BufO[1][1][1] = 308.595825 
+BufO[1][1][2] = 244.425186 
+BufO[1][2][0] = 255.850052 
+BufO[1][2][1] = 251.165314 
+BufO[1][2][2] = 203.318100 
+BufO[2][0][0] = 293.228271 
+BufO[2][0][1] = 291.833221 
+BufO[2][0][2] = 238.013824 
+BufO[2][1][0] = 304.585114 
+BufO[2][1][1] = 298.899536 
+BufO[2][1][2] = 241.737152 
+BufO[2][2][0] = 253.118179 
+BufO[2][2][1] = 252.196136 
+BufO[2][2][2] = 204.095627 
+Runtime = 81461.0 (microsec) 
+
+Checking results. . . .
+
+Results correct.
+
+Program exiting.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+D:\cmu\18643\18643_2019fall\lab2\cnn\solution1\sim\verilog>set PATH= 
+
+D:\cmu\18643\18643_2019fall\lab2\cnn\solution1\sim\verilog>call D:/Xilinx/Vivado/2018.3/bin/xelab xil_defaultlib.apatb_convolve_kernel_top glbl -prj convolve_kernel.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s convolve_kernel -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_convolve_kernel_top glbl -prj convolve_kernel.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s convolve_kernel -debug wave 
+Multi-threading is on. Using 2 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/AESL_autobram_bufi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_bufi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/AESL_autobram_bufo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_bufo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/AESL_autobram_bufw.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_bufw
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_convolve_kernel_top
+INFO: [VRFC 10-2458] undeclared symbol brambufw_Rst_A, assumed default net type wire [D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v:255]
+INFO: [VRFC 10-2458] undeclared symbol brambufw_Rst_B, assumed default net type wire [D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v:262]
+INFO: [VRFC 10-2458] undeclared symbol brambufi_Rst_A, assumed default net type wire [D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v:300]
+INFO: [VRFC 10-2458] undeclared symbol brambufi_Rst_B, assumed default net type wire [D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v:307]
+INFO: [VRFC 10-2458] undeclared symbol brambufo_Rst_A, assumed default net type wire [D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v:345]
+INFO: [VRFC 10-2458] undeclared symbol brambufo_Rst_B, assumed default net type wire [D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v:352]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_kernel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_kernel_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel_fbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_kernel_fbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel_fcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_kernel_fcud
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/ip/xil_defaultlib/convolve_kernel_ap_fadd_2_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'convolve_kernel_ap_fadd_2_full_dsp_32'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/ip/xil_defaultlib/convolve_kernel_ap_fmul_1_max_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'convolve_kernel_ap_fmul_1_max_dsp_32'
+Starting static elaboration
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90373]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-3499] library name 'floating_point_v7_1_7' of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/convolve_kernel_ap_fadd_2_full_dsp_32.vhd:195]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90373]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-3499] library name 'floating_point_v7_1_7' of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/convolve_kernel_ap_fmul_1_max_dsp_32.vhd:195]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_7.floating_point_v7_1_7_viv_comp
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package floating_point_v7_1_7.floating_point_v7_1_7_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_7.floating_point_v7_1_7_exp_table_...
+Compiling package mult_gen_v12_0_14.mult_gen_v12_0_14_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_7.floating_point_v7_1_7_pkg
+Compiling package floating_point_v7_1_7.flt_utils
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.convolve_kernel_control_s_axi
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=7,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_7.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_7.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture struct of entity floating_point_v7_1_7.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=24,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=16,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=48,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=24,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_7.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=13,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=27,length=0)\]
+Compiling architecture synth of entity floating_point_v7_1_7.align_add_dsp48e1_sgl [\align_add_dsp48e1_sgl(c_xdevice...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=27)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [delay_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=5,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_7.lead_zero_encode_shift [\lead_zero_encode_shift(ab_fw=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=4)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=3)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110010101001011...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010001010111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11101110101000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=25,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_7.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_7.norm_and_round_dsp48e1_sgl [\norm_and_round_dsp48e1_sgl(c_mu...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10011001100110011001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111000000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=9,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_7.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=8,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=10,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_7.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_7.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_7.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_7.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_7.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture synth of entity floating_point_v7_1_7.compare [\compare(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=8)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=9)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=12,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_7.flt_add_exp_sp [\flt_add_exp_sp(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=23)\]
+Compiling architecture synth of entity floating_point_v7_1_7.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_7.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_7.flt_add [\flt_add(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=32,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_7.floating_point_v7_1_7_viv [\floating_point_v7_1_7_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_7.floating_point_v7_1_7 [\floating_point_v7_1_7(c_xdevice...]
+Compiling architecture convolve_kernel_ap_fadd_2_full_dsp_32_arch of entity xil_defaultlib.convolve_kernel_ap_fadd_2_full_dsp_32 [convolve_kernel_ap_fadd_2_full_d...]
+Compiling module xil_defaultlib.convolve_kernel_fbkb
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=17,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_7.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_7.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_7.fix_mult_dsp48e1_sgl [\fix_mult_dsp48e1_sgl(registers=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.fix_mult [\fix_mult(c_xdevicefamily="zynqu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_7.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_7.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_7.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_7.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=14,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_7.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="z...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=30,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_7.delay [\delay(width=18,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_7.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_7.flt_round_dsp_opt_full [\flt_round_dsp_opt_full(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_7.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_7.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_7.flt_mult [\flt_mult(c_xdevicefamily="zynqu...]
+Compiling architecture xilinx of entity floating_point_v7_1_7.floating_point_v7_1_7_viv [\floating_point_v7_1_7_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_7.floating_point_v7_1_7 [\floating_point_v7_1_7(c_xdevice...]
+Compiling architecture convolve_kernel_ap_fmul_1_max_dsp_32_arch of entity xil_defaultlib.convolve_kernel_ap_fmul_1_max_dsp_32 [convolve_kernel_ap_fmul_1_max_ds...]
+Compiling module xil_defaultlib.convolve_kernel_fcud(ID=1)
+Compiling module xil_defaultlib.convolve_kernel
+Compiling module xil_defaultlib.AESL_autobram_bufw
+Compiling module xil_defaultlib.AESL_autobram_bufi
+Compiling module xil_defaultlib.AESL_autobram_bufo
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.apatb_convolve_kernel_top
+Compiling module work.glbl
+Built simulation snapshot convolve_kernel
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/xsim.dir/convolve_kernel/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/xsim.dir/convolve_kernel/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Sep 22 09:35:53 2019. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep 22 09:35:53 2019...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/convolve_kernel/xsim_script.tcl
+# xsim {convolve_kernel} -autoloadwcfg -tclbatch {convolve_kernel.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source convolve_kernel.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set bufo_group [add_wave_group bufo(bram) -into $cinoutgroup]
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufo_Rst_A -into $bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufo_Clk_A -into $bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufo_Dout_A -into $bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufo_Din_A -into $bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufo_WEN_A -into $bufo_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufo_EN_A -into $bufo_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufo_Addr_A -into $bufo_group -radix hex
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axi_slave) -into $coutputgroup]
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/interrupt -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_BRESP -into $return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_BREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_BVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_RRESP -into $return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_RDATA -into $return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_RREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_RVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_ARREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_ARVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_ARADDR -into $return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_WSTRB -into $return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_WDATA -into $return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_WREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_WVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_AWREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_AWVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/s_axi_control_AWADDR -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set bufi_group [add_wave_group bufi(bram) -into $cinputgroup]
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufi_Rst_A -into $bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufi_Clk_A -into $bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufi_Dout_A -into $bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufi_Din_A -into $bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufi_WEN_A -into $bufi_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufi_EN_A -into $bufi_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufi_Addr_A -into $bufi_group -radix hex
+## set bufw_group [add_wave_group bufw(bram) -into $cinputgroup]
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufw_Rst_A -into $bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufw_Clk_A -into $bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufw_Dout_A -into $bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufw_Din_A -into $bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufw_WEN_A -into $bufw_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufw_EN_A -into $bufw_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/bufw_Addr_A -into $bufw_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake(internal)" -into $designtopgroup]
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/ap_done -into $blocksiggroup
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/ap_idle -into $blocksiggroup
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/ap_ready -into $blocksiggroup
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/ap_start -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_convolve_kernel_top/AESL_inst_convolve_kernel/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_convolve_kernel_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_convolve_kernel_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_convolve_kernel_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_convolve_kernel_top/LENGTH_bufw -into $tb_portdepth_group -radix hex
+## add_wave /apatb_convolve_kernel_top/LENGTH_bufi -into $tb_portdepth_group -radix hex
+## add_wave /apatb_convolve_kernel_top/LENGTH_bufo -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_bufo_group [add_wave_group bufo(bram) -into $tbcinoutgroup]
+## add_wave /apatb_convolve_kernel_top/bufo_RST_A -into $tb_bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufo_CLK_A -into $tb_bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufo_DOUT_A -into $tb_bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufo_DIN_A -into $tb_bufo_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufo_WEN_A -into $tb_bufo_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/bufo_EN_A -into $tb_bufo_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/bufo_ADDR_A -into $tb_bufo_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axi_slave) -into $tbcoutputgroup]
+## add_wave /apatb_convolve_kernel_top/control_INTERRUPT -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_BRESP -into $tb_return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/control_BREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_BVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_RRESP -into $tb_return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/control_RDATA -into $tb_return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/control_RREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_RVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_ARREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_ARVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_ARADDR -into $tb_return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/control_WSTRB -into $tb_return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/control_WDATA -into $tb_return_group -radix hex
+## add_wave /apatb_convolve_kernel_top/control_WREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_WVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_AWREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_AWVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/control_AWADDR -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_bufi_group [add_wave_group bufi(bram) -into $tbcinputgroup]
+## add_wave /apatb_convolve_kernel_top/bufi_RST_A -into $tb_bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufi_CLK_A -into $tb_bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufi_DOUT_A -into $tb_bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufi_DIN_A -into $tb_bufi_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufi_WEN_A -into $tb_bufi_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/bufi_EN_A -into $tb_bufi_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/bufi_ADDR_A -into $tb_bufi_group -radix hex
+## set tb_bufw_group [add_wave_group bufw(bram) -into $tbcinputgroup]
+## add_wave /apatb_convolve_kernel_top/bufw_RST_A -into $tb_bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufw_CLK_A -into $tb_bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufw_DOUT_A -into $tb_bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufw_DIN_A -into $tb_bufw_group -radix hex
+## add_wave /apatb_convolve_kernel_top/bufw_WEN_A -into $tb_bufw_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/bufw_EN_A -into $tb_bufw_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_kernel_top/bufw_ADDR_A -into $tb_bufw_group -radix hex
+## save_wave_config convolve_kernel.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 32 [0.00%] @ "125000"
+// RTL Simulation : 1 / 32 [0.00%] @ "193085000"
+// RTL Simulation : 2 / 32 [0.00%] @ "386035000"
+// RTL Simulation : 3 / 32 [0.00%] @ "578985000"
+// RTL Simulation : 4 / 32 [0.00%] @ "771935000"
+// RTL Simulation : 5 / 32 [0.00%] @ "964885000"
+// RTL Simulation : 6 / 32 [0.00%] @ "1157835000"
+// RTL Simulation : 7 / 32 [0.00%] @ "1350785000"
+// RTL Simulation : 8 / 32 [0.00%] @ "1543735000"
+// RTL Simulation : 9 / 32 [0.00%] @ "1736685000"
+// RTL Simulation : 10 / 32 [0.00%] @ "1929635000"
+// RTL Simulation : 11 / 32 [0.00%] @ "2122585000"
+// RTL Simulation : 12 / 32 [0.00%] @ "2315535000"
+// RTL Simulation : 13 / 32 [0.00%] @ "2508485000"
+// RTL Simulation : 14 / 32 [0.00%] @ "2701435000"
+// RTL Simulation : 15 / 32 [0.00%] @ "2894385000"
+// RTL Simulation : 16 / 32 [0.00%] @ "3087335000"
+// RTL Simulation : 17 / 32 [0.00%] @ "3280285000"
+// RTL Simulation : 18 / 32 [0.00%] @ "3473235000"
+// RTL Simulation : 19 / 32 [0.00%] @ "3666185000"
+// RTL Simulation : 20 / 32 [0.00%] @ "3859135000"
+// RTL Simulation : 21 / 32 [0.00%] @ "4052085000"
+// RTL Simulation : 22 / 32 [0.00%] @ "4245035000"
+// RTL Simulation : 23 / 32 [0.00%] @ "4437985000"
+// RTL Simulation : 24 / 32 [0.00%] @ "4630935000"
+// RTL Simulation : 25 / 32 [0.00%] @ "4823885000"
+// RTL Simulation : 26 / 32 [0.00%] @ "5016835000"
+// RTL Simulation : 27 / 32 [0.00%] @ "5209785000"
+// RTL Simulation : 28 / 32 [0.00%] @ "5402735000"
+// RTL Simulation : 29 / 32 [0.00%] @ "5595685000"
+// RTL Simulation : 30 / 32 [0.00%] @ "5788635000"
+// RTL Simulation : 31 / 32 [0.00%] @ "5981585000"
+// RTL Simulation : 32 / 32 [100.00%] @ "6174535000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 6174575 ns : File "D:/cmu/18643/18643_2019fall/lab2/cnn/solution1/sim/verilog/convolve_kernel.autotb.v" Line 460
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:01:18 . Memory (MB): peak = 218.262 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Sep 22 09:37:23 2019...
+INFO: [COSIM 212-316] Starting C post checking ...
+*********************
+**Running testbench**
+*********************
+
+K_tws=5; S_wts=1;
+R_ofm=2; C_ofm=2; M_ofm=4;
+(R_ifm)=6; (C_ifm)=6; N_ifm=48
+Tr=3; Tc=3; Tm=3; Tn=3
+
+Computing reference. . . .
+
+Testing and timing kernel. . . .
+
+BufO[0][0][0] = 19.438000 
+BufO[0][0][1] = 18.111898 
+BufO[0][0][2] = 14.037800 
+BufO[0][1][0] = 20.916603 
+BufO[0][1][1] = 16.516596 
+BufO[0][1][2] = 13.030499 
+BufO[0][2][0] = 14.954201 
+BufO[0][2][1] = 11.455500 
+BufO[0][2][2] = 11.494799 
+BufO[1][0][0] = 20.252403 
+BufO[1][0][1] = 16.281702 
+BufO[1][0][2] = 13.709902 
+BufO[1][1][0] = 20.425901 
+BufO[1][1][1] = 18.377502 
+BufO[1][1][2] = 13.360100 
+BufO[1][2][0] = 14.806903 
+BufO[1][2][1] = 13.469200 
+BufO[1][2][2] = 9.820999 
+BufO[2][0][0] = 17.132504 
+BufO[2][0][1] = 16.956303 
+BufO[2][0][2] = 12.684699 
+BufO[2][1][0] = 21.493698 
+BufO[2][1][1] = 17.858297 
+BufO[2][1][2] = 12.296499 
+BufO[2][2][0] = 15.326200 
+BufO[2][2][1] = 13.728399 
+BufO[2][2][2] = 9.439800 
+BufO[0][0][0] = 37.642387 
+BufO[0][0][1] = 37.078503 
+BufO[0][0][2] = 29.143091 
+BufO[0][1][0] = 40.571503 
+BufO[0][1][1] = 37.122601 
+BufO[0][1][2] = 29.160599 
+BufO[0][2][0] = 30.858503 
+BufO[0][2][1] = 26.902201 
+BufO[0][2][2] = 25.023792 
+BufO[1][0][0] = 37.634102 
+BufO[1][0][1] = 33.666298 
+BufO[1][0][2] = 28.139704 
+BufO[1][1][0] = 40.181194 
+BufO[1][1][1] = 37.924000 
+BufO[1][1][2] = 29.609997 
+BufO[1][2][0] = 30.083502 
+BufO[1][2][1] = 29.224998 
+BufO[1][2][2] = 22.592304 
+BufO[2][0][0] = 36.949799 
+BufO[2][0][1] = 36.016701 
+BufO[2][0][2] = 29.528193 
+BufO[2][1][0] = 40.227894 
+BufO[2][1][1] = 39.329899 
+BufO[2][1][2] = 30.253704 
+BufO[2][2][0] = 32.735401 
+BufO[2][2][1] = 30.232702 
+BufO[2][2][2] = 23.801300 
+BufO[0][0][0] = 56.706295 
+BufO[0][0][1] = 54.601292 
+BufO[0][0][2] = 43.020191 
+BufO[0][1][0] = 61.733513 
+BufO[0][1][1] = 57.639503 
+BufO[0][1][2] = 43.914692 
+BufO[0][2][0] = 48.244900 
+BufO[0][2][1] = 42.721394 
+BufO[0][2][2] = 38.052292 
+BufO[1][0][0] = 53.499081 
+BufO[1][0][1] = 48.859703 
+BufO[1][0][2] = 41.728004 
+BufO[1][1][0] = 57.108101 
+BufO[1][1][1] = 55.622883 
+BufO[1][1][2] = 44.464909 
+BufO[1][2][0] = 44.565105 
+BufO[1][2][1] = 44.709896 
+BufO[1][2][2] = 35.959389 
+BufO[2][0][0] = 57.047192 
+BufO[2][0][1] = 55.924595 
+BufO[2][0][2] = 45.446495 
+BufO[2][1][0] = 63.370495 
+BufO[2][1][1] = 62.101204 
+BufO[2][1][2] = 46.815605 
+BufO[2][2][0] = 51.954494 
+BufO[2][2][1] = 48.489197 
+BufO[2][2][2] = 38.663799 
+BufO[0][0][0] = 71.427986 
+BufO[0][0][1] = 70.743202 
+BufO[0][0][2] = 54.869495 
+BufO[0][1][0] = 77.432480 
+BufO[0][1][1] = 74.877083 
+BufO[0][1][2] = 57.939194 
+BufO[0][2][0] = 62.286213 
+BufO[0][2][1] = 56.632698 
+BufO[0][2][2] = 49.828598 
+BufO[1][0][0] = 69.536888 
+BufO[1][0][1] = 65.144997 
+BufO[1][0][2] = 54.898697 
+BufO[1][1][0] = 75.714027 
+BufO[1][1][1] = 73.945488 
+BufO[1][1][2] = 59.848301 
+BufO[1][2][0] = 58.380207 
+BufO[1][2][1] = 59.844296 
+BufO[1][2][2] = 48.856583 
+BufO[2][0][0] = 72.668900 
+BufO[2][0][1] = 71.879486 
+BufO[2][0][2] = 57.942986 
+BufO[2][1][0] = 80.572586 
+BufO[2][1][1] = 80.399094 
+BufO[2][1][2] = 60.431194 
+BufO[2][2][0] = 66.103889 
+BufO[2][2][1] = 64.179901 
+BufO[2][2][2] = 49.143700 
+BufO[0][0][0] = 89.464279 
+BufO[0][0][1] = 88.854073 
+BufO[0][0][2] = 71.506813 
+BufO[0][1][0] = 97.514702 
+BufO[0][1][1] = 95.258461 
+BufO[0][1][2] = 75.930397 
+BufO[0][2][0] = 77.007004 
+BufO[0][2][1] = 71.947701 
+BufO[0][2][2] = 62.757195 
+BufO[1][0][0] = 84.805199 
+BufO[1][0][1] = 83.703659 
+BufO[1][0][2] = 66.830711 
+BufO[1][1][0] = 91.861549 
+BufO[1][1][1] = 91.299088 
+BufO[1][1][2] = 73.745979 
+BufO[1][2][0] = 71.851517 
+BufO[1][2][1] = 74.285416 
+BufO[1][2][2] = 59.817570 
+BufO[2][0][0] = 88.775986 
+BufO[2][0][1] = 88.650703 
+BufO[2][0][2] = 73.258469 
+BufO[2][1][0] = 96.774170 
+BufO[2][1][1] = 98.227768 
+BufO[2][1][2] = 75.963181 
+BufO[2][2][0] = 79.655670 
+BufO[2][2][1] = 79.287674 
+BufO[2][2][2] = 62.880890 
+BufO[0][0][0] = 109.493156 
+BufO[0][0][1] = 108.828461 
+BufO[0][0][2] = 89.703209 
+BufO[0][1][0] = 114.740288 
+BufO[0][1][1] = 115.141449 
+BufO[0][1][2] = 93.531204 
+BufO[0][2][0] = 91.025887 
+BufO[0][2][1] = 87.592018 
+BufO[0][2][2] = 76.102806 
+BufO[1][0][0] = 104.168190 
+BufO[1][0][1] = 104.813271 
+BufO[1][0][2] = 84.287102 
+BufO[1][1][0] = 111.171829 
+BufO[1][1][1] = 111.405891 
+BufO[1][1][2] = 89.804482 
+BufO[1][2][0] = 86.365692 
+BufO[1][2][1] = 90.000221 
+BufO[1][2][2] = 71.951355 
+BufO[2][0][0] = 109.828285 
+BufO[2][0][1] = 110.870384 
+BufO[2][0][2] = 92.320023 
+BufO[2][1][0] = 117.677185 
+BufO[2][1][1] = 119.140274 
+BufO[2][1][2] = 94.008499 
+BufO[2][2][0] = 94.553673 
+BufO[2][2][1] = 95.097214 
+BufO[2][2][2] = 76.128777 
+BufO[0][0][0] = 128.476166 
+BufO[0][0][1] = 127.663063 
+BufO[0][0][2] = 103.107613 
+BufO[0][1][0] = 137.139908 
+BufO[0][1][1] = 136.388718 
+BufO[0][1][2] = 109.961998 
+BufO[0][2][0] = 107.434990 
+BufO[0][2][1] = 103.235741 
+BufO[0][2][2] = 88.086487 
+BufO[1][0][0] = 123.866249 
+BufO[1][0][1] = 123.861359 
+BufO[1][0][2] = 98.420700 
+BufO[1][1][0] = 132.194489 
+BufO[1][1][1] = 131.730545 
+BufO[1][1][2] = 104.580490 
+BufO[1][2][0] = 103.464905 
+BufO[1][2][1] = 106.774323 
+BufO[1][2][2] = 85.378456 
+BufO[2][0][0] = 128.800110 
+BufO[2][0][1] = 128.756683 
+BufO[2][0][2] = 106.302711 
+BufO[2][1][0] = 136.668045 
+BufO[2][1][1] = 138.457886 
+BufO[2][1][2] = 108.362701 
+BufO[2][2][0] = 108.637779 
+BufO[2][2][1] = 109.014229 
+BufO[2][2][2] = 86.269997 
+BufO[0][0][0] = 146.134720 
+BufO[0][0][1] = 145.814606 
+BufO[0][0][2] = 119.085732 
+BufO[0][1][0] = 156.945541 
+BufO[0][1][1] = 154.116135 
+BufO[0][1][2] = 124.378784 
+BufO[0][2][0] = 123.401382 
+BufO[0][2][1] = 117.671364 
+BufO[0][2][2] = 99.992867 
+BufO[1][0][0] = 140.775650 
+BufO[1][0][1] = 138.747330 
+BufO[1][0][2] = 110.007584 
+BufO[1][1][0] = 149.984329 
+BufO[1][1][1] = 146.928055 
+BufO[1][1][2] = 117.099701 
+BufO[1][2][0] = 117.759880 
+BufO[1][2][1] = 119.028038 
+BufO[1][2][2] = 94.429062 
+BufO[2][0][0] = 144.822754 
+BufO[2][0][1] = 144.162781 
+BufO[2][0][2] = 116.935936 
+BufO[2][1][0] = 152.120834 
+BufO[2][1][1] = 154.596619 
+BufO[2][1][2] = 120.494698 
+BufO[2][2][0] = 122.509270 
+BufO[2][2][1] = 120.259239 
+BufO[2][2][2] = 96.116989 
+BufO[0][0][0] = 165.747284 
+BufO[0][0][1] = 166.695633 
+BufO[0][0][2] = 135.846436 
+BufO[0][1][0] = 176.231064 
+BufO[0][1][1] = 173.151657 
+BufO[0][1][2] = 139.867783 
+BufO[0][2][0] = 138.082520 
+BufO[0][2][1] = 132.133881 
+BufO[0][2][2] = 112.500763 
+BufO[1][0][0] = 158.676147 
+BufO[1][0][1] = 160.671280 
+BufO[1][0][2] = 126.283272 
+BufO[1][1][0] = 167.896561 
+BufO[1][1][1] = 163.965683 
+BufO[1][1][2] = 132.288620 
+BufO[1][2][0] = 134.091049 
+BufO[1][2][1] = 133.205750 
+BufO[1][2][2] = 107.656982 
+BufO[2][0][0] = 163.008057 
+BufO[2][0][1] = 162.725922 
+BufO[2][0][2] = 131.150162 
+BufO[2][1][0] = 169.359314 
+BufO[2][1][1] = 173.211853 
+BufO[2][1][2] = 133.654617 
+BufO[2][2][0] = 136.688599 
+BufO[2][2][1] = 134.981018 
+BufO[2][2][2] = 109.294212 
+BufO[0][0][0] = 186.885422 
+BufO[0][0][1] = 187.221970 
+BufO[0][0][2] = 151.824814 
+BufO[0][1][0] = 198.063278 
+BufO[0][1][1] = 194.444138 
+BufO[0][1][2] = 155.668701 
+BufO[0][2][0] = 155.576996 
+BufO[0][2][1] = 149.784210 
+BufO[0][2][2] = 125.968987 
+BufO[1][0][0] = 178.733185 
+BufO[1][0][1] = 178.702850 
+BufO[1][0][2] = 141.896790 
+BufO[1][1][0] = 189.258011 
+BufO[1][1][1] = 185.636566 
+BufO[1][1][2] = 149.890808 
+BufO[1][2][0] = 150.547195 
+BufO[1][2][1] = 148.119797 
+BufO[1][2][2] = 120.687683 
+BufO[2][0][0] = 182.680115 
+BufO[2][0][1] = 180.981674 
+BufO[2][0][2] = 146.638992 
+BufO[2][1][0] = 190.526794 
+BufO[2][1][1] = 194.387451 
+BufO[2][1][2] = 148.810410 
+BufO[2][2][0] = 153.741974 
+BufO[2][2][1] = 151.437515 
+BufO[2][2][2] = 121.696915 
+BufO[0][0][0] = 205.755325 
+BufO[0][0][1] = 206.198990 
+BufO[0][0][2] = 165.294128 
+BufO[0][1][0] = 216.524612 
+BufO[0][1][1] = 211.360672 
+BufO[0][1][2] = 169.427979 
+BufO[0][2][0] = 171.129166 
+BufO[0][2][1] = 164.899612 
+BufO[0][2][2] = 137.805618 
+BufO[1][0][0] = 196.164124 
+BufO[1][0][1] = 195.263519 
+BufO[1][0][2] = 154.045288 
+BufO[1][1][0] = 205.385040 
+BufO[1][1][1] = 201.950241 
+BufO[1][1][2] = 162.271790 
+BufO[1][2][0] = 165.707809 
+BufO[1][2][1] = 161.320007 
+BufO[1][2][2] = 131.608414 
+BufO[2][0][0] = 201.392517 
+BufO[2][0][1] = 198.719299 
+BufO[2][0][2] = 161.889999 
+BufO[2][1][0] = 209.173630 
+BufO[2][1][1] = 213.121094 
+BufO[2][1][2] = 162.460419 
+BufO[2][2][0] = 167.829559 
+BufO[2][2][1] = 166.229324 
+BufO[2][2][2] = 133.145416 
+BufO[0][0][0] = 225.476318 
+BufO[0][0][1] = 228.186783 
+BufO[0][0][2] = 181.738159 
+BufO[0][1][0] = 237.489502 
+BufO[0][1][1] = 232.736267 
+BufO[0][1][2] = 186.787750 
+BufO[0][2][0] = 187.991180 
+BufO[0][2][1] = 181.176071 
+BufO[0][2][2] = 151.006592 
+BufO[1][0][0] = 215.620651 
+BufO[1][0][1] = 214.860352 
+BufO[1][0][2] = 169.530396 
+BufO[1][1][0] = 226.096771 
+BufO[1][1][1] = 222.358139 
+BufO[1][1][2] = 178.813507 
+BufO[1][2][0] = 181.226608 
+BufO[1][2][1] = 177.871231 
+BufO[1][2][2] = 144.194733 
+BufO[2][0][0] = 221.992310 
+BufO[2][0][1] = 222.081085 
+BufO[2][0][2] = 179.264893 
+BufO[2][1][0] = 232.524582 
+BufO[2][1][1] = 236.599121 
+BufO[2][1][2] = 181.538696 
+BufO[2][2][0] = 185.526199 
+BufO[2][2][1] = 184.713043 
+BufO[2][2][2] = 147.359116 
+BufO[0][0][0] = 246.211609 
+BufO[0][0][1] = 245.147095 
+BufO[0][0][2] = 196.021088 
+BufO[0][1][0] = 257.290466 
+BufO[0][1][1] = 251.491791 
+BufO[0][1][2] = 201.257065 
+BufO[0][2][0] = 201.728470 
+BufO[0][2][1] = 197.710541 
+BufO[0][2][2] = 162.458801 
+BufO[1][0][0] = 234.061249 
+BufO[1][0][1] = 232.490936 
+BufO[1][0][2] = 181.738007 
+BufO[1][1][0] = 244.630524 
+BufO[1][1][1] = 238.906998 
+BufO[1][1][2] = 192.906540 
+BufO[1][2][0] = 195.951523 
+BufO[1][2][1] = 192.489792 
+BufO[1][2][2] = 156.354904 
+BufO[2][0][0] = 243.232559 
+BufO[2][0][1] = 240.796326 
+BufO[2][0][2] = 193.415314 
+BufO[2][1][0] = 253.508804 
+BufO[2][1][1] = 256.203888 
+BufO[2][1][2] = 198.113693 
+BufO[2][2][0] = 202.968750 
+BufO[2][2][1] = 199.313736 
+BufO[2][2][2] = 160.042984 
+BufO[0][0][0] = 262.942261 
+BufO[0][0][1] = 261.883911 
+BufO[0][0][2] = 208.582108 
+BufO[0][1][0] = 273.228516 
+BufO[0][1][1] = 266.735046 
+BufO[0][1][2] = 212.593353 
+BufO[0][2][0] = 216.363846 
+BufO[0][2][1] = 211.191391 
+BufO[0][2][2] = 173.279800 
+BufO[1][0][0] = 250.576614 
+BufO[1][0][1] = 248.552124 
+BufO[1][0][2] = 194.847656 
+BufO[1][1][0] = 260.145264 
+BufO[1][1][1] = 254.694595 
+BufO[1][1][2] = 205.585403 
+BufO[1][2][0] = 210.446564 
+BufO[1][2][1] = 207.044662 
+BufO[1][2][2] = 167.947327 
+BufO[2][0][0] = 260.088715 
+BufO[2][0][1] = 259.268921 
+BufO[2][0][2] = 208.964981 
+BufO[2][1][0] = 270.656799 
+BufO[2][1][1] = 272.886047 
+BufO[2][1][2] = 212.876633 
+BufO[2][2][0] = 218.101196 
+BufO[2][2][1] = 214.080704 
+BufO[2][2][2] = 171.641006 
+BufO[0][0][0] = 280.806152 
+BufO[0][0][1] = 281.045532 
+BufO[0][0][2] = 222.978348 
+BufO[0][1][0] = 293.495331 
+BufO[0][1][1] = 286.576508 
+BufO[0][1][2] = 228.382904 
+BufO[0][2][0] = 230.825195 
+BufO[0][2][1] = 226.543518 
+BufO[0][2][2] = 184.616028 
+BufO[1][0][0] = 268.861603 
+BufO[1][0][1] = 267.992554 
+BufO[1][0][2] = 209.963654 
+BufO[1][1][0] = 280.689972 
+BufO[1][1][1] = 276.087555 
+BufO[1][1][2] = 221.055496 
+BufO[1][2][0] = 225.013412 
+BufO[1][2][1] = 221.712189 
+BufO[1][2][2] = 178.815308 
+BufO[2][0][0] = 277.533539 
+BufO[2][0][1] = 278.238678 
+BufO[2][0][2] = 224.042969 
+BufO[2][1][0] = 289.860840 
+BufO[2][1][1] = 292.922638 
+BufO[2][1][2] = 227.874863 
+BufO[2][2][0] = 233.737305 
+BufO[2][2][1] = 229.699921 
+BufO[2][2][2] = 184.580307 
+BufO[0][0][0] = 298.147125 
+BufO[0][0][1] = 299.592834 
+BufO[0][0][2] = 237.962326 
+BufO[0][1][0] = 312.772705 
+BufO[0][1][1] = 304.678680 
+BufO[0][1][2] = 243.472061 
+BufO[0][2][0] = 245.876892 
+BufO[0][2][1] = 239.407150 
+BufO[0][2][2] = 196.063019 
+BufO[1][0][0] = 287.168304 
+BufO[1][0][1] = 284.884521 
+BufO[1][0][2] = 224.061783 
+BufO[1][1][0] = 299.361755 
+BufO[1][1][1] = 294.480896 
+BufO[1][1][2] = 234.771301 
+BufO[1][2][0] = 241.884323 
+BufO[1][2][1] = 236.793625 
+BufO[1][2][2] = 191.345932 
+BufO[2][0][0] = 294.946869 
+BufO[2][0][1] = 295.025269 
+BufO[2][0][2] = 238.070175 
+BufO[2][1][0] = 307.846649 
+BufO[2][1][1] = 311.409607 
+BufO[2][1][2] = 242.934235 
+BufO[2][2][0] = 250.128403 
+BufO[2][2][1] = 244.723633 
+BufO[2][2][2] = 197.380493 
+BufO[0][0][0] = 17.875999 
+BufO[0][0][1] = 17.098597 
+BufO[0][0][2] = 13.627899 
+BufO[0][1][0] = 19.714798 
+BufO[0][1][1] = 17.333000 
+BufO[0][1][2] = 13.790797 
+BufO[0][2][0] = 14.039996 
+BufO[0][2][1] = 12.629798 
+BufO[0][2][2] = 11.156499 
+BufO[1][0][0] = 19.043898 
+BufO[1][0][1] = 16.063097 
+BufO[1][0][2] = 11.747101 
+BufO[1][1][0] = 18.532394 
+BufO[1][1][1] = 16.165802 
+BufO[1][1][2] = 14.592999 
+BufO[1][2][0] = 16.379705 
+BufO[1][2][1] = 14.421703 
+BufO[1][2][2] = 11.526101 
+BufO[2][0][0] = 17.352800 
+BufO[2][0][1] = 14.893902 
+BufO[2][0][2] = 12.799399 
+BufO[2][1][0] = 20.526596 
+BufO[2][1][1] = 17.655800 
+BufO[2][1][2] = 13.703000 
+BufO[2][2][0] = 16.739998 
+BufO[2][2][1] = 13.243399 
+BufO[2][2][2] = 10.182900 
+BufO[0][0][0] = 33.176392 
+BufO[0][0][1] = 33.304295 
+BufO[0][0][2] = 26.374598 
+BufO[0][1][0] = 35.992004 
+BufO[0][1][1] = 35.873100 
+BufO[0][1][2] = 27.908295 
+BufO[0][2][0] = 29.560396 
+BufO[0][2][1] = 26.495899 
+BufO[0][2][2] = 23.416599 
+BufO[1][0][0] = 36.843792 
+BufO[1][0][1] = 35.012905 
+BufO[1][0][2] = 25.233395 
+BufO[1][1][0] = 38.333790 
+BufO[1][1][1] = 34.602898 
+BufO[1][1][2] = 30.046598 
+BufO[1][2][0] = 32.237804 
+BufO[1][2][1] = 29.580097 
+BufO[1][2][2] = 23.842907 
+BufO[2][0][0] = 35.125099 
+BufO[2][0][1] = 33.133598 
+BufO[2][0][2] = 26.472397 
+BufO[2][1][0] = 38.749695 
+BufO[2][1][1] = 36.916283 
+BufO[2][1][2] = 28.956497 
+BufO[2][2][0] = 32.400902 
+BufO[2][2][1] = 27.701605 
+BufO[2][2][2] = 23.295200 
+BufO[0][0][0] = 51.938583 
+BufO[0][0][1] = 52.166397 
+BufO[0][0][2] = 40.271610 
+BufO[0][1][0] = 56.250813 
+BufO[0][1][1] = 55.671082 
+BufO[0][1][2] = 43.039478 
+BufO[0][2][0] = 46.627586 
+BufO[0][2][1] = 42.973103 
+BufO[0][2][2] = 36.636593 
+BufO[1][0][0] = 53.723701 
+BufO[1][0][1] = 52.851307 
+BufO[1][0][2] = 38.743999 
+BufO[1][1][0] = 58.690189 
+BufO[1][1][1] = 54.978699 
+BufO[1][1][2] = 45.763504 
+BufO[1][2][0] = 49.398685 
+BufO[1][2][1] = 45.634991 
+BufO[1][2][2] = 36.793312 
+BufO[2][0][0] = 51.724701 
+BufO[2][0][1] = 50.683907 
+BufO[2][0][2] = 38.963902 
+BufO[2][1][0] = 57.589504 
+BufO[2][1][1] = 55.442982 
+BufO[2][1][2] = 43.613693 
+BufO[2][2][0] = 48.764397 
+BufO[2][2][1] = 43.389912 
+BufO[2][2][2] = 35.803204 
+BufO[0][0][0] = 68.928864 
+BufO[0][0][1] = 68.906685 
+BufO[0][0][2] = 52.538410 
+BufO[0][1][0] = 72.896721 
+BufO[0][1][1] = 74.314171 
+BufO[0][1][2] = 58.074688 
+BufO[0][2][0] = 62.150574 
+BufO[0][2][1] = 59.454300 
+BufO[0][2][2] = 49.123390 
+BufO[1][0][0] = 70.864105 
+BufO[1][0][1] = 70.030403 
+BufO[1][0][2] = 51.997292 
+BufO[1][1][0] = 76.115784 
+BufO[1][1][1] = 75.015457 
+BufO[1][1][2] = 61.629494 
+BufO[1][2][0] = 65.300682 
+BufO[1][2][1] = 62.357792 
+BufO[1][2][2] = 49.790207 
+BufO[2][0][0] = 67.768616 
+BufO[2][0][1] = 67.880501 
+BufO[2][0][2] = 52.137505 
+BufO[2][1][0] = 76.606117 
+BufO[2][1][1] = 74.517586 
+BufO[2][1][2] = 58.719677 
+BufO[2][2][0] = 63.877808 
+BufO[2][2][1] = 60.609615 
+BufO[2][2][2] = 49.024200 
+BufO[0][0][0] = 85.618767 
+BufO[0][0][1] = 86.046188 
+BufO[0][0][2] = 66.648605 
+BufO[0][1][0] = 89.069527 
+BufO[0][1][1] = 93.581367 
+BufO[0][1][2] = 73.461586 
+BufO[0][2][0] = 74.928978 
+BufO[0][2][1] = 72.845612 
+BufO[0][2][2] = 60.934185 
+BufO[1][0][0] = 87.303299 
+BufO[1][0][1] = 87.786903 
+BufO[1][0][2] = 67.066399 
+BufO[1][1][0] = 93.711411 
+BufO[1][1][1] = 92.893463 
+BufO[1][1][2] = 78.115807 
+BufO[1][2][0] = 78.397293 
+BufO[1][2][1] = 77.832878 
+BufO[1][2][2] = 62.825996 
+BufO[2][0][0] = 83.497925 
+BufO[2][0][1] = 84.610779 
+BufO[2][0][2] = 67.911507 
+BufO[2][1][0] = 94.307541 
+BufO[2][1][1] = 93.002281 
+BufO[2][1][2] = 73.776276 
+BufO[2][2][0] = 77.833717 
+BufO[2][2][1] = 75.466301 
+BufO[2][2][2] = 62.298401 
+BufO[0][0][0] = 108.108345 
+BufO[0][0][1] = 110.068878 
+BufO[0][0][2] = 84.894821 
+BufO[0][1][0] = 109.656242 
+BufO[0][1][1] = 114.093674 
+BufO[0][1][2] = 92.296417 
+BufO[0][2][0] = 90.879356 
+BufO[0][2][1] = 89.455330 
+BufO[0][2][2] = 74.701675 
+BufO[1][0][0] = 108.665573 
+BufO[1][0][1] = 110.741798 
+BufO[1][0][2] = 84.727806 
+BufO[1][1][0] = 114.354370 
+BufO[1][1][1] = 115.025261 
+BufO[1][1][2] = 96.115601 
+BufO[1][2][0] = 94.318100 
+BufO[1][2][1] = 95.031487 
+BufO[1][2][2] = 76.916504 
+BufO[2][0][0] = 105.071213 
+BufO[2][0][1] = 105.546906 
+BufO[2][0][2] = 85.953903 
+BufO[2][1][0] = 114.879753 
+BufO[2][1][1] = 114.109200 
+BufO[2][1][2] = 90.533569 
+BufO[2][2][0] = 91.867020 
+BufO[2][2][1] = 92.074715 
+BufO[2][2][2] = 76.403198 
+BufO[0][0][0] = 126.726868 
+BufO[0][0][1] = 126.846092 
+BufO[0][0][2] = 97.650848 
+BufO[0][1][0] = 129.248123 
+BufO[0][1][1] = 132.458481 
+BufO[0][1][2] = 106.588432 
+BufO[0][2][0] = 108.383842 
+BufO[0][2][1] = 105.554115 
+BufO[0][2][2] = 86.495598 
+BufO[1][0][0] = 128.297089 
+BufO[1][0][1] = 128.175186 
+BufO[1][0][2] = 98.033897 
+BufO[1][1][0] = 134.464233 
+BufO[1][1][1] = 133.996307 
+BufO[1][1][2] = 110.039558 
+BufO[1][2][0] = 110.361694 
+BufO[1][2][1] = 110.475967 
+BufO[1][2][2] = 89.159012 
+BufO[2][0][0] = 123.864250 
+BufO[2][0][1] = 122.474121 
+BufO[2][0][2] = 99.641808 
+BufO[2][1][0] = 134.779739 
+BufO[2][1][1] = 133.105026 
+BufO[2][1][2] = 105.847496 
+BufO[2][2][0] = 108.450592 
+BufO[2][2][1] = 109.213440 
+BufO[2][2][2] = 88.990387 
+BufO[0][0][0] = 145.080475 
+BufO[0][0][1] = 146.545715 
+BufO[0][0][2] = 111.498886 
+BufO[0][1][0] = 148.870590 
+BufO[0][1][1] = 151.579971 
+BufO[0][1][2] = 120.763039 
+BufO[0][2][0] = 124.993027 
+BufO[0][2][1] = 120.874420 
+BufO[0][2][2] = 97.866600 
+BufO[1][0][0] = 146.954391 
+BufO[1][0][1] = 147.028336 
+BufO[1][0][2] = 111.446304 
+BufO[1][1][0] = 151.859818 
+BufO[1][1][1] = 151.856567 
+BufO[1][1][2] = 123.404465 
+BufO[1][2][0] = 125.591797 
+BufO[1][2][1] = 125.194962 
+BufO[1][2][2] = 102.010078 
+BufO[2][0][0] = 141.734894 
+BufO[2][0][1] = 139.948761 
+BufO[2][0][2] = 115.167183 
+BufO[2][1][0] = 153.000458 
+BufO[2][1][1] = 150.407578 
+BufO[2][1][2] = 119.842102 
+BufO[2][2][0] = 125.370003 
+BufO[2][2][1] = 125.169792 
+BufO[2][2][2] = 101.371681 
+BufO[0][0][0] = 162.465118 
+BufO[0][0][1] = 164.605301 
+BufO[0][0][2] = 125.396767 
+BufO[0][1][0] = 166.417542 
+BufO[0][1][1] = 168.455063 
+BufO[0][1][2] = 134.346176 
+BufO[0][2][0] = 138.955612 
+BufO[0][2][1] = 135.407532 
+BufO[0][2][2] = 108.990288 
+BufO[1][0][0] = 166.302307 
+BufO[1][0][1] = 166.122986 
+BufO[1][0][2] = 126.049873 
+BufO[1][1][0] = 169.620529 
+BufO[1][1][1] = 169.883636 
+BufO[1][1][2] = 137.249008 
+BufO[1][2][0] = 140.783005 
+BufO[1][2][1] = 139.350021 
+BufO[1][2][2] = 113.744179 
+BufO[2][0][0] = 160.451019 
+BufO[2][0][1] = 159.379150 
+BufO[2][0][2] = 130.928085 
+BufO[2][1][0] = 171.189148 
+BufO[2][1][1] = 167.719467 
+BufO[2][1][2] = 133.514206 
+BufO[2][2][0] = 140.595291 
+BufO[2][2][1] = 140.173508 
+BufO[2][2][2] = 113.588478 
+BufO[0][0][0] = 183.494644 
+BufO[0][0][1] = 185.251968 
+BufO[0][0][2] = 141.030884 
+BufO[0][1][0] = 187.971024 
+BufO[0][1][1] = 189.023514 
+BufO[0][1][2] = 151.464905 
+BufO[0][2][0] = 157.888611 
+BufO[0][2][1] = 153.245163 
+BufO[0][2][2] = 122.564392 
+BufO[1][0][0] = 186.280975 
+BufO[1][0][1] = 184.178589 
+BufO[1][0][2] = 141.203903 
+BufO[1][1][0] = 192.041153 
+BufO[1][1][1] = 190.790100 
+BufO[1][1][2] = 153.862930 
+BufO[1][2][0] = 158.508636 
+BufO[1][2][1] = 156.020126 
+BufO[1][2][2] = 126.596672 
+BufO[2][0][0] = 179.935379 
+BufO[2][0][1] = 178.439682 
+BufO[2][0][2] = 145.856308 
+BufO[2][1][0] = 192.626450 
+BufO[2][1][1] = 187.694244 
+BufO[2][1][2] = 150.157318 
+BufO[2][2][0] = 157.835876 
+BufO[2][2][1] = 156.968018 
+BufO[2][2][2] = 126.734383 
+BufO[0][0][0] = 201.325104 
+BufO[0][0][1] = 203.811127 
+BufO[0][0][2] = 156.548203 
+BufO[0][1][0] = 206.475266 
+BufO[0][1][1] = 206.168915 
+BufO[0][1][2] = 164.763214 
+BufO[0][2][0] = 172.392609 
+BufO[0][2][1] = 166.188278 
+BufO[0][2][2] = 133.323532 
+BufO[1][0][0] = 205.385086 
+BufO[1][0][1] = 203.534698 
+BufO[1][0][2] = 155.149811 
+BufO[1][1][0] = 210.443604 
+BufO[1][1][1] = 207.697388 
+BufO[1][1][2] = 167.660416 
+BufO[1][2][0] = 172.900864 
+BufO[1][2][1] = 169.646683 
+BufO[1][2][2] = 137.885956 
+BufO[2][0][0] = 199.304321 
+BufO[2][0][1] = 195.532928 
+BufO[2][0][2] = 159.323334 
+BufO[2][1][0] = 209.057144 
+BufO[2][1][1] = 204.193909 
+BufO[2][1][2] = 162.922211 
+BufO[2][2][0] = 172.793015 
+BufO[2][2][1] = 170.571548 
+BufO[2][2][2] = 138.123779 
+BufO[0][0][0] = 222.953461 
+BufO[0][0][1] = 228.027557 
+BufO[0][0][2] = 175.648102 
+BufO[0][1][0] = 228.155899 
+BufO[0][1][1] = 229.119614 
+BufO[0][1][2] = 184.728470 
+BufO[0][2][0] = 190.368591 
+BufO[0][2][1] = 185.417908 
+BufO[0][2][2] = 149.178207 
+BufO[1][0][0] = 225.568329 
+BufO[1][0][1] = 225.783310 
+BufO[1][0][2] = 173.081131 
+BufO[1][1][0] = 230.164688 
+BufO[1][1][1] = 230.160751 
+BufO[1][1][2] = 184.602081 
+BufO[1][2][0] = 190.942184 
+BufO[1][2][1] = 187.382477 
+BufO[1][2][2] = 152.121475 
+BufO[2][0][0] = 218.102692 
+BufO[2][0][1] = 216.835571 
+BufO[2][0][2] = 177.112213 
+BufO[2][1][0] = 230.341766 
+BufO[2][1][1] = 224.764313 
+BufO[2][1][2] = 180.879059 
+BufO[2][2][0] = 189.816376 
+BufO[2][2][1] = 189.440964 
+BufO[2][2][2] = 152.447006 
+BufO[0][0][0] = 243.605133 
+BufO[0][0][1] = 246.504837 
+BufO[0][0][2] = 191.296768 
+BufO[0][1][0] = 248.366714 
+BufO[0][1][1] = 248.409714 
+BufO[0][1][2] = 199.817657 
+BufO[0][2][0] = 208.471283 
+BufO[0][2][1] = 202.161514 
+BufO[0][2][2] = 161.424423 
+BufO[1][0][0] = 246.115616 
+BufO[1][0][1] = 245.965988 
+BufO[1][0][2] = 187.771912 
+BufO[1][1][0] = 251.173340 
+BufO[1][1][1] = 250.706329 
+BufO[1][1][2] = 200.458984 
+BufO[1][2][0] = 208.150284 
+BufO[1][2][1] = 204.047516 
+BufO[1][2][2] = 165.389648 
+BufO[2][0][0] = 239.391022 
+BufO[2][0][1] = 236.036118 
+BufO[2][0][2] = 192.621918 
+BufO[2][1][0] = 250.259613 
+BufO[2][1][1] = 243.899506 
+BufO[2][1][2] = 196.062744 
+BufO[2][2][0] = 205.907471 
+BufO[2][2][1] = 206.189545 
+BufO[2][2][2] = 166.515121 
+BufO[0][0][0] = 262.539612 
+BufO[0][0][1] = 264.460693 
+BufO[0][0][2] = 206.297852 
+BufO[0][1][0] = 266.691467 
+BufO[0][1][1] = 266.134094 
+BufO[0][1][2] = 214.586685 
+BufO[0][2][0] = 222.344055 
+BufO[0][2][1] = 216.493164 
+BufO[0][2][2] = 173.366638 
+BufO[1][0][0] = 264.695953 
+BufO[1][0][1] = 263.616547 
+BufO[1][0][2] = 203.364761 
+BufO[1][1][0] = 270.675873 
+BufO[1][1][1] = 270.612213 
+BufO[1][1][2] = 214.400162 
+BufO[1][2][0] = 223.064941 
+BufO[1][2][1] = 219.862808 
+BufO[1][2][2] = 177.971405 
+BufO[2][0][0] = 257.120941 
+BufO[2][0][1] = 255.390961 
+BufO[2][0][2] = 209.112030 
+BufO[2][1][0] = 266.857361 
+BufO[2][1][1] = 260.638031 
+BufO[2][1][2] = 210.149261 
+BufO[2][2][0] = 221.077881 
+BufO[2][2][1] = 221.214340 
+BufO[2][2][2] = 178.887283 
+BufO[0][0][0] = 280.915680 
+BufO[0][0][1] = 284.284180 
+BufO[0][0][2] = 221.579712 
+BufO[0][1][0] = 285.453461 
+BufO[0][1][1] = 285.877136 
+BufO[0][1][2] = 229.258667 
+BufO[0][2][0] = 235.831818 
+BufO[0][2][1] = 232.928696 
+BufO[0][2][2] = 184.639771 
+BufO[1][0][0] = 284.410309 
+BufO[1][0][1] = 283.107635 
+BufO[1][0][2] = 217.392151 
+BufO[1][1][0] = 290.342987 
+BufO[1][1][1] = 290.202484 
+BufO[1][1][2] = 230.709381 
+BufO[1][2][0] = 238.979141 
+BufO[1][2][1] = 236.083878 
+BufO[1][2][2] = 190.787476 
+BufO[2][0][0] = 275.814941 
+BufO[2][0][1] = 275.046631 
+BufO[2][0][2] = 223.986618 
+BufO[2][1][0] = 286.599304 
+BufO[2][1][1] = 280.412567 
+BufO[2][1][2] = 226.677780 
+BufO[2][2][0] = 236.727081 
+BufO[2][2][1] = 237.172424 
+BufO[2][2][2] = 191.295441 
+BufO[0][0][0] = 298.770477 
+BufO[0][0][1] = 301.641968 
+BufO[0][0][2] = 234.822906 
+BufO[0][1][0] = 303.573761 
+BufO[0][1][1] = 304.417694 
+BufO[0][1][2] = 242.750793 
+BufO[0][2][0] = 250.596451 
+BufO[0][2][1] = 248.004913 
+BufO[0][2][2] = 196.085892 
+BufO[1][0][0] = 302.717010 
+BufO[1][0][1] = 299.999603 
+BufO[1][0][2] = 231.490280 
+BufO[1][1][0] = 309.014771 
+BufO[1][1][1] = 308.595825 
+BufO[1][1][2] = 244.425186 
+BufO[1][2][0] = 255.850052 
+BufO[1][2][1] = 251.165314 
+BufO[1][2][2] = 203.318100 
+BufO[2][0][0] = 293.228271 
+BufO[2][0][1] = 291.833221 
+BufO[2][0][2] = 238.013824 
+BufO[2][1][0] = 304.585114 
+BufO[2][1][1] = 298.899536 
+BufO[2][1][2] = 241.737152 
+BufO[2][2][0] = 253.118179 
+BufO[2][2][1] = 252.196136 
+BufO[2][2][2] = 204.095627 
+Runtime = 17185.0 (microsec) 
+
+Checking results. . . .
+
+Results correct.
+
+Program exiting.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
