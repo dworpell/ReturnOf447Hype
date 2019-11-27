@@ -242,13 +242,19 @@ void KeyExpansion(uint8_t round_key[176], uint8_t init_key[16])
 		round_word[i]=round_word[i-4]^temp_prev;
 	}
 }
-void aes_main(uint8_t input[16], uint8_t output[16]){
+void aes_main(uint32_t input[16], uint32_t output[16]){
+#pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+
+#pragma HLS INTERFACE bram port=input
+#pragma HLS INTERFACE bram port=output
 	uint8_t State[4][4];
 	int i=0;
 	int j=0;
 	for (i=0; i<4; i++){
 		for (j=0; j<4; j++) {
-			State[i][j] = input[j*4 + i];
+			State[i][j] = (uint8_t)(input[j*4 + i] & 0xff);
 		}
 	}
 	uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
@@ -279,6 +285,13 @@ void aes_main(uint8_t input[16], uint8_t output[16]){
 	print_state(State);
 }
 void aes_decrypt(uint8_t input[16], uint8_t output[16]) {
+#pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+
+#pragma HLS INTERFACE bram port=input
+#pragma HLS INTERFACE bram port=output
+
 	uint8_t State[4][4];
 	int i=0;
 	int j=0;

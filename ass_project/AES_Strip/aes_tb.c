@@ -21,4 +21,10 @@ int main() {
 			printf("%x",input[(j*4 +i)]);
 		}
 	}
+	for (i=0; i<16; i++){
+		if (input[i] != output[i]){
+			return 1;
+		}
+	}
+	return 0;
 }
