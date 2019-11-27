@@ -1,8 +1,8 @@
 #include "aes_kernel.h"
 #include <stdio.h>
 int main() {
-	uint8_t input[16];
-	uint8_t output[16];
+	uint32_t input[16];
+	uint32_t output[16];
 	int i=0;
 	for (i=0; i<16; i++){
 		input[i]=0;
@@ -14,6 +14,9 @@ int main() {
 		}
 	}
 	printf("\n");
+
+
+	/*
 	printf("Decrypting: \n\n");
 	aes_decrypt(output, input);
 	for(i=0; i<4; i++) {
@@ -26,5 +29,6 @@ int main() {
 			return 1;
 		}
 	}
+	*/
 	return 0;
 }

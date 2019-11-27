@@ -255,6 +255,7 @@ void aes_main(uint32_t input[16], uint32_t output[16]){
 	for (i=0; i<4; i++){
 		for (j=0; j<4; j++) {
 			State[i][j] = (uint8_t)(input[j*4 + i] & 0xff);
+			printf("State[%d][%d]: %x\n", i, j, State[i][j]);
 		}
 	}
 	uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
