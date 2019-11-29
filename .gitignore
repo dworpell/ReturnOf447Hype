@@ -15,9 +15,11 @@ Lab2/*
 *.dat
 *.adb
 *.bc
+*.html
 x*.*
 *.tmp
 Makefile
+webtalk
 project_*.ip_user_files
 project_*.runs
 .autopilot
@@ -226,3 +228,4 @@ Lab2/Outputs.txt
 Lab2/tempkernel.h
 Lab2/test.tcl
 Lab2/vivado_hls.log
+*.bc
