@@ -18,12 +18,17 @@ Lab2/*
 x*.*
 *.tmp
 Makefile
+project_*.ip_user_files
+project_*.runs
+.autopilot
 .metadata
 syn
 sim
 impl
 drivers
 Debug
+build
+csim
 stats.txt
 libsrc
 Lab3/RegularVivado

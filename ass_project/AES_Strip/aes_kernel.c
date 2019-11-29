@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "aes_kernel.h"
-#define DEBUG
+//#define DEBUG
 #define XTIME_E(x) (xtime8(x)^xtime4(x)^xtime(x))
 #define XTIME_B(x) (xtime8(x)^xtime(x)^x)
 #define XTIME_D(x) (xtime8(x)^xtime4(x)^x)
@@ -93,6 +93,7 @@ void SubBytes(uint8_t State[4][4]) {
 	print_state(State);
 #endif
 	for (int i=0; i<4; i++) {
+#pragma HLS UNROLL
 		for (int j=0; j<4;j++) {
 			State[j][i] = sbox[State[j][i]];
 		}
@@ -108,6 +109,7 @@ void InvSubBytes(uint8_t State[4][4]) {
 	print_state(State);
 #endif
 	for (int i=0; i<4; i++) {
+#pragma HLS PIPELINE
 		for (int j=0; j<4;j++) {
 			State[j][i] = rsbox[State[j][i]];
 		}
@@ -137,6 +139,7 @@ void InvMixColumns(uint8_t State[4][4]){
 	print_state(State);
 #endif
 	for (int i =0; i<4; i++) {
+#pragma HLS PIPELINE
 		uint8_t c0=State[0][i];
 		uint8_t c1=State[1][i];
 		uint8_t c2=State[2][i];
@@ -182,6 +185,7 @@ void MixColumns(uint8_t State[4][4])
 	print_state(State);
 #endif
 	for (int i =0; i<4; i++) {
+#pragma HLS PIPELINE
 			uint8_t c0=State[0][i];
 			uint8_t c1=State[1][i];
 			uint8_t c2=State[2][i];
@@ -203,6 +207,7 @@ void AddRoundKey(uint8_t State[4][4], uint8_t round_key[176], unsigned round)
 {
 	for (int i=0; i<4; i++)
 	{
+#pragma HLS PIPELINE
 		State[0][i] = State[0][i] ^ round_key[(round*16)+(i*4)];
 		State[1][i] = State[1][i] ^ round_key[(round*16)+(i*4)+1];
 		State[2][i] = State[2][i] ^ round_key[(round*16)+(i*4)+2];
@@ -249,7 +254,9 @@ void aes_main(uint32_t input[16], uint32_t output[16]){
 
 #pragma HLS INTERFACE bram port=input
 #pragma HLS INTERFACE bram port=output
+
 	uint8_t State[4][4];
+
 	int i=0;
 	int j=0;
 	for (i=0; i<4; i++){
@@ -269,6 +276,7 @@ void aes_main(uint32_t input[16], uint32_t output[16]){
 #endif
 	AddRoundKey(State,round_key,0);
 	for (int round=1; round<10; round++) {
+#pragma HLS PIPELINE
 		SubBytes(State);
 		ShiftRows(State);
 		MixColumns(State);
@@ -285,7 +293,7 @@ void aes_main(uint32_t input[16], uint32_t output[16]){
 	}
 	print_state(State);
 }
-void aes_decrypt(uint8_t input[16], uint8_t output[16]) {
+void aes_decrypt(uint32_t input[16], uint32_t output[16]) {
 #pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
 #pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
 #pragma HLS INTERFACE s_axilite port=return bundle=control

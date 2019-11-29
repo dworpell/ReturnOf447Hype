@@ -56,11 +56,19 @@
  * reference implementation; same as ZhangIsfpga15_1() in
  * convolve.cpp; but always done in single-precision FP
  */
-   DATA_T input[32];
-   DATA_T output[32];
-   DATA_T temp_buf[32];
+   DATA_T input[BufSize];
+   DATA_T output[BufSize];
+   DATA_T temp_buf[BufSize];
 
 int main() {
+
+#ifndef NO_TIMING
+#ifdef __SDK__
+  XTime Timer1;
+#else
+  struct timeval start_time, end_time;
+#endif
+#endif
 
 #ifdef __SDK__
   printf("*************************\n");
@@ -79,6 +87,16 @@ int main() {
   if (error_count) 
     return XST_FAILURE;
   printf("Zynq Initialization complete\n\n");
+#endif
+
+#ifndef NO_TIMING
+  printf("Testing and timing kernel. . . .\n\n");
+#ifdef __SDK__
+  Timer1 = 0;
+  XTime_SetTime(Timer1);
+#else
+  gettimeofday(&start_time, NULL);
+#endif
 #endif
 
   Xil_DCacheFlush();
@@ -108,8 +126,25 @@ int main() {
      }
   */
 
-  for (int i=0; i<32; i++){
-  	  printf("%x\n",output[i]);
-    }
-  return (0);
+#ifndef NO_TIMING
+#ifdef __SDK__
+  XTime_GetTime(&Timer1);
+  printf("Total execution time = %lf (sec)\n\n", double(Timer1)/COUNTS_PER_SECOND);
+#else
+  gettimeofday(&end_time, NULL);
+  printf("Runtime = %0.1f (microsec) \n\n",
+	 (end_time.tv_sec - start_time.tv_sec)*1e6 + (end_time.tv_usec - start_time.tv_usec) );
+#endif
+#else
+  printf("NO_TIMING: No timing done.\n\n");
+#endif
+
+
+ for (int i=0; i<4; i++){
+	  for (int j=0; j<4; j++){
+		  printf("%x",output[4*j+i]);
+	  }
+ }
+ printf("\n");
+ return (0);
 }

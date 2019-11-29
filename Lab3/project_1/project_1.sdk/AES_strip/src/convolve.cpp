@@ -101,7 +101,7 @@ void ZhangIsfpga15_3(DATA_T *input, DATA_T *output) {
 	  while (!XAes_main_IsDone(&aes_main_dev));
 
       // DMA BRAM->BufO, Tm*Tr*Tc*sizeof(DATA_T) bytes
-	  XAxiCdma_SimpleTransfer(&cdma_dev_weight, (u32)BRAM_WEIGHT_BASEADDR, (UINTPTR)BufW, BufSize*sizeof(DATA_T), NULL, NULL);
+	  XAxiCdma_SimpleTransfer(&cdma_dev_weight, (u32)BRAM_WEIGHT_BASEADDR, (UINTPTR)output, BufSize*sizeof(DATA_T), NULL, NULL);
 	  //Wait till DMA completion
 	  while (XAxiCdma_IsBusy(&cdma_dev_weight));
 #endif

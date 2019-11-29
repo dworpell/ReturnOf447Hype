@@ -56,7 +56,7 @@ typedef unsigned DATA_T;
 #define BRAM_INPUT_BASEADDR 0XC0000000
 #define BRAM_WEIGHT_BASEADDR 0XC2000000
 
-#define BufSize 16
+#define BufSize 32
 
 //devices and configuration pointers for CDMA IPs used to transfer data to/from DRAM and BRAM
 extern XAxiCdma        cdma_dev_input;
