@@ -25,6 +25,7 @@ project_*.runs
 .autopilot
 .metadata
 syn
+build
 sim
 impl
 drivers

@@ -4,13 +4,16 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project AES_Strip
+set_top aes_main
 add_files AES_Strip/aes_kernel.c
 add_files AES_Strip/aes_kernel.h
 add_files -tb AES_Strip/aes_kernel.h
 add_files -tb AES_Strip/aes_tb.c
 open_solution "solution1"
-set_part {xa7a12tcsg325-1q}
-create_clock -period 10 -name default
+set_part {xczu3eg-sbva484-1-e}
+create_clock -period 5 -name default
+config_sdx -optimization_level none -target none
+config_schedule -effort medium -relax_ii_for_timing=0
 #source "./AES_Strip/solution1/directives.tcl"
 csim_design
 csynth_design
