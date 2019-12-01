@@ -365,16 +365,21 @@ void KeyExpansion(uint32 round_key[4], uint32 new_key[4], uint32 round)
 	}
 }
 
-void aes_main(uint32 input[16], uint32 output[16], uint32 block_key[4], volatile uint32* stall)
+void aes_main(uint32 input[16], uint32 output[16], uint32 block_key[4], volatile uint32 input_dma_config[12], volatile uint32* inputDMA_addr, volatile uint32* dramDMA_addr)
 {
-#pragma HLS INTERFACE s_axilite port=stall bundle=control
+#pragma HLS INTERFACE m_axi depth=50 port=input_dma_config offset=off bundle=inputbram_dma
+#pragma HLS INTERFACE s_axilite port=dramDMA_addr bundle=control
+#pragma HLS INTERFACE s_axilite port=inputDMA_addr bundle=control
 #pragma HLS INTERFACE s_axilite port=block_key bundle=control
+
 #pragma HLS INTERFACE bram port=input
 #pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=output
 #pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
 #pragma HLS INTERFACE s_axilite bundle=control port=return
 
+	int stat=XAxiCdma_SimpleTransfer(input_dma_config, *inputDMA_addr, *dramDMA_addr,64);
+	while (isBusy(input_dma_config));
 	uint8 State[4][4];
 //#pragma HLS RESOURCE variable=State core=RAM_2P_LUTRAM
 #pragma HLS ARRAY_RESHAPE variable=State complete factor=4 dim=0
@@ -437,6 +442,7 @@ void aes_main(uint32 input[16], uint32 output[16], uint32 block_key[4], volatile
 			output[i*4+j]=State[i][j];
 		}
 	}
+	output[0]=stat;
 	print_state(State);
 }
 #ifdef DECRYPT

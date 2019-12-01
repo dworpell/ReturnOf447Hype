@@ -54,9 +54,6 @@
 #include "kernel.h"
 #include "sdk.h"
 
-
-
-
 /*
  * Input/output and weights.
  */
@@ -97,7 +94,7 @@ int main() {
 
 #ifndef NO_TIMING
 #ifdef __SDK__
-  XTime Timer1;
+  XTime Timer1,Timer2;
 #else
   struct timeval start_time, end_time;
 #endif
@@ -194,8 +191,7 @@ int main() {
 #ifndef NO_TIMING
   printf("Testing and timing kernel. . . .\n\n");
 #ifdef __SDK__
-  Timer1 = 0;
-  XTime_SetTime(Timer1);
+  XTime_GetTime(&Timer1);
 #else
   gettimeofday(&start_time, NULL);
 #endif
@@ -208,8 +204,8 @@ int main() {
 
 #ifndef NO_TIMING
 #ifdef __SDK__
-  XTime_GetTime(&Timer1);
-  printf("Total execution time = %lf (sec)\n\n", double(Timer1)/COUNTS_PER_SECOND);
+  XTime_GetTime(&Timer2);
+  printf("Total execution time = %lf (sec)\n\n", double(Timer2 - Timer1)/COUNTS_PER_SECOND);
 #else
   gettimeofday(&end_time, NULL);
   printf("Runtime = %0.1f (microsec) \n\n",
