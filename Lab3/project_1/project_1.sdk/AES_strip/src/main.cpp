@@ -72,7 +72,7 @@ int main() {
 
 #ifdef __SDK__
   printf("*************************\n");
-  printf("**Running Zynq ARM code**\n");
+  printf("**Running Zynqhihi ARM code**\n");
   printf("*************************\n\n");
 #endif
 
@@ -93,19 +93,25 @@ int main() {
   printf("Testing and timing kernel. . . .\n\n");
 #ifdef __SDK__
   Timer1 = 0;
+  printf("Before Timer\n");
+
   XTime_SetTime(Timer1);
+  printf("After Timer\n");
+
 #else
   gettimeofday(&start_time, NULL);
 #endif
 #endif
+printf("Before DCache Flush\n");
 
   Xil_DCacheFlush();
+printf("After DCache Flush\n");
 
   for (int i=0; i<BufSize; i++){
 	  input[i]=0;
   }
  ZhangIsfpga15_3(input, output);
- /*
+
   printf("%lx\n", sizeof(DATA_T));
   printf("%lx\n", (UINTPTR)(input));
 
@@ -123,8 +129,8 @@ int main() {
   printf("%x %x\n", ret, ret2);
   for (int i=0; i<BufSize; i++){
    	  printf("%x\n",temp_buf[i]);
-     }
-  */
+  }
+
 
 #ifndef NO_TIMING
 #ifdef __SDK__

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "aes_kernel.h"
+#include "ap_cint.h"
 //#define DEBUG
 #define XTIME_E(x) (xtime8(x)^xtime4(x)^xtime(x))
 #define XTIME_B(x) (xtime8(x)^xtime(x)^x)
@@ -88,13 +89,15 @@ static const uint8_t Rcon[11] = {
   0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36 };
 
 void SubBytes(uint8_t State[4][4]) {
+
 #ifdef DEBUG
 	printf("SubBytes: \n");
 	print_state(State);
 #endif
 	for (int i=0; i<4; i++) {
-#pragma HLS UNROLL
+#pragma HLS PIPELINE
 		for (int j=0; j<4;j++) {
+#pragma HLS UNROLL
 			State[j][i] = sbox[State[j][i]];
 		}
 	}
@@ -109,7 +112,6 @@ void InvSubBytes(uint8_t State[4][4]) {
 	print_state(State);
 #endif
 	for (int i=0; i<4; i++) {
-#pragma HLS PIPELINE
 		for (int j=0; j<4;j++) {
 			State[j][i] = rsbox[State[j][i]];
 		}
@@ -124,11 +126,35 @@ void ShiftRows(uint8_t State[4][4]) {
 	printf("ShiftRows: \n");
 	print_state(State);
 #endif
+
+	uint8_t temp1=State[1][0];
+	uint8_t temp2=0;
+	State[1][0]=State[1][1];
+	State[1][1]=State[1][2];
+	State[1][2]=State[1][3];
+	State[1][3]=temp1;
+
+	temp1=State[2][1];
+	temp2=State[2][0];
+	State[2][0]=State[2][2];
+	State[2][1]=State[2][3];
+	State[2][3]=temp1;
+	State[2][2]=temp2;
+
+	temp1=State[3][3];
+	State[3][3]=State[3][2];
+	State[3][2]=State[3][1];
+	State[3][1]=State[3][0];
+	State[3][0]=temp1;
+
+
+/*
 	uint32_t* temp_arr;//[4];
 	temp_arr=(uint32_t*)State[0];
 	temp_arr[1]=(temp_arr[1]>>8)  | (temp_arr[1]<<24);
 	temp_arr[2]=(temp_arr[2]>>16) | (temp_arr[2]<<16);
 	temp_arr[3]=(temp_arr[3]>>24) | (temp_arr[3]<<8);
+*/
 #ifdef DEBUG
 	print_state(State);
 #endif
@@ -139,7 +165,6 @@ void InvMixColumns(uint8_t State[4][4]){
 	print_state(State);
 #endif
 	for (int i =0; i<4; i++) {
-#pragma HLS PIPELINE
 		uint8_t c0=State[0][i];
 		uint8_t c1=State[1][i];
 		uint8_t c2=State[2][i];
@@ -185,7 +210,7 @@ void MixColumns(uint8_t State[4][4])
 	print_state(State);
 #endif
 	for (int i =0; i<4; i++) {
-#pragma HLS PIPELINE
+#pragma HLS UNROLL
 			uint8_t c0=State[0][i];
 			uint8_t c1=State[1][i];
 			uint8_t c2=State[2][i];
@@ -203,22 +228,31 @@ void MixColumns(uint8_t State[4][4])
 #endif
 }
 //Nb * (Nr+1) words -> 4*11 = 44 Words = 176 bytes
-void AddRoundKey(uint8_t State[4][4], uint8_t round_key[176], unsigned round)
+void AddRoundKey(uint8_t State[4][4], uint32_t round_key[44], unsigned round)
 {
+#ifdef DEBUG
+	printf("AddRoundKey: \n");
+	print_state(State);
+#endif
+	uint32_t* temp_arr;//[4];
+	temp_arr=(uint32_t*)State[0];
 	for (int i=0; i<4; i++)
 	{
-#pragma HLS PIPELINE
-		State[0][i] = State[0][i] ^ round_key[(round*16)+(i*4)];
-		State[1][i] = State[1][i] ^ round_key[(round*16)+(i*4)+1];
-		State[2][i] = State[2][i] ^ round_key[(round*16)+(i*4)+2];
-		State[3][i] = State[3][i] ^ round_key[(round*16)+(i*4)+3];
+#pragma HLS UNROLL
+		State[0][i] = temp_arr[i] ^ round_key[(round*4)+i];
+		State[1][i] = State[1][i] ^ round_key[(round*4)+i];
+		State[2][i] = State[2][i] ^ round_key[(round*4)+i];
+		State[3][i] = State[3][i] ^ round_key[(round*4)+i];
 	}
+#ifdef DEBUG
+	print_state(State);
+#endif
 }
-uint32_t RotateWord(uint32_t word)
+inline uint32_t RotateWord(uint32_t word)
 {
 	return (word>>8) | ((word<<24));
 }
-uint32_t SBoxWord(uint32_t word)
+inline uint32_t SBoxWord(uint32_t word)
 {
 	uint32_t temp=0;
 	temp= (sbox[word >>24])<<24;
@@ -227,17 +261,15 @@ uint32_t SBoxWord(uint32_t word)
 	temp|=(sbox[(word     ) & 0xff]);
 	return temp;
 }
-void KeyExpansion(uint8_t round_key[176], uint8_t init_key[16])
+void KeyExpansion(uint32_t round_word[44], uint32_t init_key[4])
 {
 	//Round 0 - copy all keys into first 16
-	uint32_t* round_word;
+	//uint32_t* round_word;
 	//round_word=(*((uint32_t**) &round_key));
-	round_word = (uint32_t*)round_key;
-	uint32_t* init_word;//[4];
-	init_word= (uint32_t*) init_key;
+	//round_word = (uint32_t*)round_key;
 	int i=0;
 	for (i=0;i<4;i++){
-		round_word[i]=init_word[i];
+		round_word[i]=init_key[i];
 	}
 	for (i=4; i<44;i++) {
 		uint32_t temp_prev=round_word[i-1];
@@ -247,36 +279,40 @@ void KeyExpansion(uint8_t round_key[176], uint8_t init_key[16])
 		round_word[i]=round_word[i-4]^temp_prev;
 	}
 }
-void aes_main(uint32_t input[16], uint32_t output[16]){
-#pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
-#pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
-#pragma HLS INTERFACE s_axilite port=return bundle=control
-
+void aes_main(uint32_t input[16], uint32_t output[16], uint32_t block_key[4],volatile uint32_t* stall)
+{
+#pragma HLS INTERFACE s_axilite port=stall bundle=control
+#pragma HLS INTERFACE s_axilite port=block_key bundle=control
 #pragma HLS INTERFACE bram port=input
+#pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=output
+#pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
+#pragma HLS INTERFACE s_axilite bundle=control port=return
 
 	uint8_t State[4][4];
+#pragma HLS RESOURCE variable=State core=RAM_2P_LUTRAM
+#pragma HLS ARRAY_RESHAPE variable=State complete factor=4 dim=1
 
 	int i=0;
 	int j=0;
-	for (i=0; i<4; i++){
-		for (j=0; j<4; j++) {
+
+	Outer: for (i=0; i<4; i++){
+		Inner: for (j=0; j<4; j++) {
 			State[i][j] = (uint8_t)(input[j*4 + i] & 0xff);
 			printf("State[%d][%d]: %x\n", i, j, State[i][j]);
 		}
 	}
-	uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	//uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 	//IV to be added later
-
-	uint8_t round_key[176];
-	KeyExpansion(round_key, init_key);
+	int32 round_key[44];
+	KeyExpansion(round_key, block_key);
 #ifdef DEBUG
 	print_roundkeys(round_key);
 #endif
+
 	AddRoundKey(State,round_key,0);
-	for (int round=1; round<10; round++) {
-#pragma HLS PIPELINE
+	Main_AES_Loop: for (int round=1; round<10; round++) {
 		SubBytes(State);
 		ShiftRows(State);
 		MixColumns(State);
@@ -286,22 +322,19 @@ void aes_main(uint32_t input[16], uint32_t output[16]){
 	ShiftRows(State);
 	AddRoundKey(State,round_key, 10);
 
-	for (i=0; i<4; i++){
-		for (j=0; j<4; j++) {
+	//while(*stall);
+	ouput_outer: for (i=0; i<4; i++){
+		output_inner: for (j=0; j<4; j++) {
 			output[i*4+j]=State[i][j];
 		}
 	}
 	print_state(State);
 }
-void aes_decrypt(uint32_t input[16], uint32_t output[16]) {
-#pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
-#pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
-#pragma HLS INTERFACE s_axilite port=return bundle=control
+void aes_decrypt(uint32_t input[16], uint32_t output[16],uint32_t block_key[4]) {
 
-#pragma HLS INTERFACE bram port=input
-#pragma HLS INTERFACE bram port=output
 
 	uint8_t State[4][4];
+
 	int i=0;
 	int j=0;
 	for (i=0; i<4; i++){
@@ -309,12 +342,12 @@ void aes_decrypt(uint32_t input[16], uint32_t output[16]) {
 			State[i][j] = input[i*4 + j];
 		}
 	}
-	uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	//uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 	//IV to be added later
 
-	uint8_t round_key[176];
-	KeyExpansion(round_key, init_key);
+	uint32_t round_key[44];
+	KeyExpansion(round_key,block_key);
 #ifdef DEBUG
 	print_roundkeys(round_key);
 	print_state(State);

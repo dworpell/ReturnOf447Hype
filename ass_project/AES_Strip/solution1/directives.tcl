@@ -3,3 +3,5 @@
 ## Please DO NOT edit it.
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
+set_directive_pipeline "aes_main/aes_main_label0"
+set_directive_unroll "ShiftRows"
