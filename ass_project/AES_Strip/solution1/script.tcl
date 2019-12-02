@@ -5,11 +5,11 @@
 ############################################################
 open_project AES_Strip
 set_top aes_main
-add_files AES_Strip/aes_dma.c
-add_files AES_Strip/aes_kernel.c
 add_files AES_Strip/aes_kernel.h
-add_files -tb AES_Strip/aes_kernel.h -cflags "-Wno-unknown-pragmas"
+add_files AES_Strip/aes_kernel.c
+add_files AES_Strip/aes_dma.c
 add_files -tb AES_Strip/aes_tb.c -cflags "-Wno-unknown-pragmas"
+add_files -tb AES_Strip/aes_kernel.h -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xczu3eg-sbva484-1-e}
 create_clock -period 4 -name default
