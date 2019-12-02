@@ -412,13 +412,13 @@ void aes_main(uint32 input[BUFSIZE], uint32 output[BUFSIZE], uint32 block_key[4]
 //#pragma HLS INTERFACE m_axi depth=256 port=input_dma_config offset=off bundle=inputbram_dma
 //#pragma HLS INTERFACE s_axilite port=dramDMA_addr bundle=control
 //#pragma HLS INTERFACE s_axilite port=inputDMA_addr bundle=control
-#pragma HLS INTERFACE s_axilite port=block_key bundle=control
+#pragma HLS INTERFACE s_axilite port=block_key bundle=control clock=axi_clock
 
 #pragma HLS INTERFACE bram port=input
 #pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
 #pragma HLS INTERFACE bram port=output
 #pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
-#pragma HLS INTERFACE s_axilite bundle=control port=return
+#pragma HLS INTERFACE s_axilite bundle=control port=return clock=axi_clock
 
 	//int stat=XAxiCdma_SimpleTransfer(input_dma_config, *inputDMA_addr, *dramDMA_addr,64);
 	//while (isBusy(input_dma_config));
