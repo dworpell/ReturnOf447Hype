@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="aes_kernel.c" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_kernel.c"/>
+    <originFiles name="aes_kernel.h" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_kernel.h"/>
+  </source>
+  <testbench>
+    <originFiles name="aes_tb.c" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_tb.c"/>
+    <originFiles name="aes_kernel.h" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_kernel.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
