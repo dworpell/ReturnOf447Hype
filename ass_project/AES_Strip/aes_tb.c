@@ -10,7 +10,7 @@ int main() {
 	uint32 decrypted_to[4];
 	int i=0;
 	for (i=0; i<BUFSIZE; i++){
-		input[i]=i;
+		input[i]=0;
 	}
 	for (i=0; i<4; i++) {
 		key[i]=0;

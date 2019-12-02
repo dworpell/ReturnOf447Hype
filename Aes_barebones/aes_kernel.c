@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "aes_kernel.h"
-#define DEBUG
+//#define DEBUG
 #define XTIME_E(x) (xtime8(x)^xtime4(x)^xtime(x))
 #define XTIME_B(x) (xtime8(x)^xtime(x)^x)
 #define XTIME_D(x) (xtime8(x)^xtime4(x)^x)
@@ -242,7 +242,7 @@ void KeyExpansion(uint8_t round_key[176], uint32_t init_word[4])
 		round_word[i]=round_word[i-4]^temp_prev;
 	}
 }
-void aes_main(uint32_t input[16], uint32_t output[16],uint32_t block_key[4]){
+void aes_mai2n(uint32_t input[16], uint32_t output[16],uint32_t block_key[4]){
 #pragma HLS INTERFACE s_axilite port=block_key bundle=control
 #pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
 #pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
@@ -286,8 +286,9 @@ void aes_main(uint32_t input[16], uint32_t output[16],uint32_t block_key[4]){
 	}
 	print_state(State);
 }
-/*
-void aes_decrypt(uint8_t input[16], uint8_t output[16]) {
+
+void aes_main(uint32_t input[16], uint32_t output[16],uint32_t block_key[4]) {
+#pragma HLS INTERFACE s_axilite port=block_key bundle=control
 #pragma HLS RESOURCE variable=input core=RAM_1P_BRAM
 #pragma HLS RESOURCE variable=output core=RAM_1P_BRAM
 #pragma HLS INTERFACE s_axilite port=return bundle=control
@@ -303,12 +304,12 @@ void aes_decrypt(uint8_t input[16], uint8_t output[16]) {
 			State[i][j] = input[i*4 + j];
 		}
 	}
-	uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	//uint8_t init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 	//IV to be added later
 
 	uint8_t round_key[176];
-	KeyExpansion(round_key, init_key);
+	KeyExpansion(round_key, block_key);
 #ifdef DEBUG
 	print_roundkeys(round_key);
 	print_state(State);
@@ -333,4 +334,4 @@ void aes_decrypt(uint8_t input[16], uint8_t output[16]) {
 		}
 	}
 }
-*/
+

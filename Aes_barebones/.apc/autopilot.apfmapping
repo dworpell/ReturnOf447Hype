@@ -5,7 +5,7 @@
     <originFiles name="aes_kernel.h" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_kernel.h"/>
   </source>
   <testbench>
-    <originFiles name="aes_tb.c" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_tb.c"/>
     <originFiles name="aes_kernel.h" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_kernel.h"/>
+    <originFiles name="aes_tb.c" path="C:\vivado_projects\ReturnOf447Hype\Aes_barebones\aes_tb.c"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

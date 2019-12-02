@@ -12,15 +12,16 @@
     "Package": "-sbva484",
     "Speed": "-1-e"
   },
-  "HlsSolution": {
-    
-  },
+  "HlsSolution": {"Config": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ]},
   "ClockInfo": {
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "1410",
+    "Latency": "1437",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -42,12 +43,13 @@
       "impl\/vhdl\/aes_main_control_s_axi.vhd",
       "impl\/vhdl\/aes_main_round_key.vhd",
       "impl\/vhdl\/aes_main_State.vhd",
+      "impl\/vhdl\/InvMixColumns.vhd",
+      "impl\/vhdl\/InvShiftRows.vhd",
+      "impl\/vhdl\/InvSubBytes.vhd",
+      "impl\/vhdl\/InvSubBytes_rsbox.vhd",
       "impl\/vhdl\/KeyExpansion.vhd",
       "impl\/vhdl\/KeyExpansion_Rcon.vhd",
       "impl\/vhdl\/KeyExpansion_sbox.vhd",
-      "impl\/vhdl\/ShiftRows.vhd",
-      "impl\/vhdl\/SubBytes.vhd",
-      "impl\/vhdl\/SubBytes_sbox.vhd",
       "impl\/vhdl\/aes_main.vhd"
     ],
     "Verilog": [
@@ -55,15 +57,16 @@
       "impl\/verilog\/aes_main_control_s_axi.v",
       "impl\/verilog\/aes_main_round_key.v",
       "impl\/verilog\/aes_main_State.v",
+      "impl\/verilog\/InvMixColumns.v",
+      "impl\/verilog\/InvShiftRows.v",
+      "impl\/verilog\/InvSubBytes.v",
+      "impl\/verilog\/InvSubBytes_rsbox.v",
+      "impl\/verilog\/InvSubBytes_rsbox_rom.dat",
       "impl\/verilog\/KeyExpansion.v",
       "impl\/verilog\/KeyExpansion_Rcon.v",
       "impl\/verilog\/KeyExpansion_Rcon_rom.dat",
       "impl\/verilog\/KeyExpansion_sbox.v",
       "impl\/verilog\/KeyExpansion_sbox_rom.dat",
-      "impl\/verilog\/ShiftRows.v",
-      "impl\/verilog\/SubBytes.v",
-      "impl\/verilog\/SubBytes_sbox.v",
-      "impl\/verilog\/SubBytes_sbox_rom.dat",
       "impl\/verilog\/aes_main.v"
     ],
     "SwDriver": [
@@ -551,19 +554,23 @@
       "Instances": [
         {
           "ModuleName": "KeyExpansion",
-          "InstanceName": "grp_KeyExpansion_fu_241"
+          "InstanceName": "grp_KeyExpansion_fu_191"
         },
         {
-          "ModuleName": "ShiftRows",
-          "InstanceName": "grp_ShiftRows_fu_252"
+          "ModuleName": "InvMixColumns",
+          "InstanceName": "grp_InvMixColumns_fu_202"
+        },
+        {
+          "ModuleName": "InvShiftRows",
+          "InstanceName": "grp_InvShiftRows_fu_207"
         },
         {
           "ModuleName": "AddRoundKey",
-          "InstanceName": "grp_AddRoundKey_fu_257"
+          "InstanceName": "grp_AddRoundKey_fu_212"
         },
         {
-          "ModuleName": "SubBytes",
-          "InstanceName": "grp_SubBytes_fu_266"
+          "ModuleName": "InvSubBytes",
+          "InstanceName": "grp_InvSubBytes_fu_221"
         }
       ]
     },
@@ -580,7 +587,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "5.384"
+          "Estimate": "5.433"
         },
         "Loops": [
           {
@@ -601,7 +608,7 @@
         "Area": {
           "BRAM_18K": "2",
           "FF": "144",
-          "LUT": "705",
+          "LUT": "750",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -635,7 +642,29 @@
           "URAM": "0"
         }
       },
-      "SubBytes": {
+      "InvShiftRows": {
+        "Latency": {
+          "LatencyBest": "11",
+          "LatencyAvg": "11",
+          "LatencyWorst": "11",
+          "PipelineII": "11",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "0.790"
+        },
+        "Area": {
+          "FF": "92",
+          "LUT": "234",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "InvSubBytes": {
         "Latency": {
           "LatencyBest": "57",
           "LatencyAvg": "57",
@@ -671,23 +700,30 @@
           "URAM": "0"
         }
       },
-      "ShiftRows": {
+      "InvMixColumns": {
         "Latency": {
-          "LatencyBest": "11",
-          "LatencyAvg": "11",
-          "LatencyWorst": "11",
-          "PipelineII": "11",
+          "LatencyBest": "17",
+          "LatencyAvg": "17",
+          "LatencyWorst": "17",
+          "PipelineII": "17",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "0.790"
+          "Estimate": "3.693"
         },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "4",
+            "Latency": "16",
+            "PipelineII": "",
+            "PipelineDepth": "4"
+          }],
         "Area": {
-          "FF": "92",
-          "LUT": "262",
+          "FF": "107",
+          "LUT": "654",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -695,17 +731,17 @@
       },
       "aes_main": {
         "Latency": {
-          "LatencyBest": "1410",
-          "LatencyAvg": "1410",
-          "LatencyWorst": "1410",
-          "PipelineII": "1411",
+          "LatencyBest": "1437",
+          "LatencyAvg": "1437",
+          "LatencyWorst": "1437",
+          "PipelineII": "1438",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "5.384"
+          "Estimate": "5.433"
         },
         "Loops": [
           {
@@ -725,16 +761,9 @@
           {
             "Name": "Loop 2",
             "TripCount": "9",
-            "Latency": "963",
+            "Latency": "990",
             "PipelineII": "",
-            "PipelineDepth": "107",
-            "Loops": [{
-                "Name": "Loop 2.1",
-                "TripCount": "4",
-                "Latency": "16",
-                "PipelineII": "",
-                "PipelineDepth": "4"
-              }]
+            "PipelineDepth": "110"
           },
           {
             "Name": "Loop 3",
@@ -753,8 +782,8 @@
         ],
         "Area": {
           "BRAM_18K": "7",
-          "FF": "580",
-          "LUT": "2276",
+          "FF": "616",
+          "LUT": "2701",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -771,7 +800,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-12-02 01:13:06 -0500",
+    "Time": "2019-12-02 05:24:36 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.3"
   }

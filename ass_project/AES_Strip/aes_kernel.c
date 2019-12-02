@@ -236,8 +236,8 @@ void ShiftRows(uint8 State[4][4]) {
 
 
 /*
-	uint32_t* temp_arr;//[4];
-	temp_arr=(uint32_t*)State[0];
+	uint32* temp_arr;//[4];
+	temp_arr=(uint32*)State[0];
 	temp_arr[1]=(temp_arr[1]>>8)  | (temp_arr[1]<<24);
 	temp_arr[2]=(temp_arr[2]>>16) | (temp_arr[2]<<16);
 	temp_arr[3]=(temp_arr[3]>>24) | (temp_arr[3]<<8);
@@ -247,7 +247,7 @@ void ShiftRows(uint8 State[4][4]) {
 #endif
 }
 
-#ifdef DECRYPT
+//#ifdef DECRYPT
 void InvMixColumns(uint8 State[4][4]){
 #ifdef DEBUG
 	printf("MixCol: \n");
@@ -267,7 +267,7 @@ void InvMixColumns(uint8 State[4][4]){
 	print_state(State);
 #endif
 }
-#endif
+//#endif
 
 #ifdef DECRYPT
 void InvShiftRows(uint8 State[4][4]) {
@@ -390,9 +390,9 @@ void KeyExpansion(uint32 round_key[4], uint32 new_key[4], uint32 round)
 {
 #pragma HLS PIPELINE
 	//Round 0 - copy all keys into first 16
-	//uint32_t* round_word;
-	//round_word=(*((uint32_t**) &round_key));
-	//round_word = (uint32_t*)round_key;
+	//uint32* round_word;
+	//round_word=(*((uint32**) &round_key));
+	//round_word = (uint32*)round_key;
 
 	uint32 temp;
 
@@ -404,6 +404,20 @@ void KeyExpansion(uint32 round_key[4], uint32 new_key[4], uint32 round)
 			temp = new_key[i-1];
 		}
 		new_key[i]=round_key[i]^temp;
+	}
+}
+void FullKeyExpansion(uint32 round_word[44], uint32 init_word[4])
+{
+	int i=0;
+	for (i=0;i<4;i++){
+		round_word[i]=init_word[i];
+	}
+	for (i=4; i<44;i++) {
+		uint32 temp_prev=round_word[i-1];
+		if(i%4==0){
+			temp_prev=(SBoxWord(RotateWord(temp_prev)))^Rcon[i/4];
+		}
+		round_word[i]=round_word[i-4]^temp_prev;
 	}
 }
 
@@ -450,44 +464,44 @@ void aes_main(uint32 input[BUFSIZE], uint32 output[BUFSIZE], uint32 block_key[4]
 		//uint8 init_key[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 		//IV to be added later
-		uint32 round_key[4];
+/*		uint32 round_key[4];
 	#pragma HLS ARRAY_RESHAPE variable=round_key complete dim=0
 		uint32 next_key[4];
 	#pragma HLS ARRAY_RESHAPE variable=next_key complete dim=0
 		for (i=0; i<4; i++){
 			round_key[i] = block_key[i];
 		}
-
+*/
 	#ifdef DEBUG
 		print_roundkeys(round_key, 0);
 	#endif
-
-		AddRoundKey(State,round_key,0);
-
-		KeyExpansion(round_key, next_key, 1);
+		uint32 round_key[44];
+		AddRoundKey(State,block_key,10);
+		FullKeyExpansion(round_key,block_key);
+		/*KeyExpansion(round_key, next_key, 1);
 		for (i=0; i<4; i++){
 			round_key[i] = next_key[i];
-		}
+		}*/
 
-		Main_AES_Loop: for (int round=1; round<10; round++) {
+		Main_AES_Loop: for (int round=9; round>0; round--) {
 	#pragma HLS PIPELINE
-			KeyExpansion(round_key, next_key, round+1);
+			//KeyExpansion(round_key, next_key, round+1);
 	#ifdef DEBUG
 			print_roundkeys(round_key, round);
 	#endif
 			SubBytes(State);
 			ShiftRows(State);
-			MixColumns(State);
+			InvMixColumns(State);
 			AddRoundKey(State, round_key, round);
 
-			for (i=0; i<4; i++){
+			/*for (i=0; i<4; i++){
 	#pragma HLS PIPELINE
 				round_key[i] = next_key[i];
-			}
+			}*/
 		}
 		SubBytes(State);
 		ShiftRows(State);
-		AddRoundKey(State,round_key, 10);
+		AddRoundKey(State,round_key, 0);
 
 		//while(*stall);
 		ouput_outer: for (i=0; i<4; i++){
@@ -507,17 +521,17 @@ void aes_main(uint32 input[BUFSIZE], uint32 output[BUFSIZE], uint32 block_key[4]
 void FullKeyExpansion(uint8_t round_key[176], uint8_t init_key[16])
 {
 	//Round 0 - copy all keys into first 16
-	uint32_t* round_word;
-	//round_word=(*((uint32_t**) &round_key));
-	round_word = (uint32_t*)round_key;
-	uint32_t* init_word;
-	init_word= (uint32_t*) init_key;
+	uint32* round_word;
+	//round_word=(*((uint32**) &round_key));
+	round_word = (uint32*)round_key;
+	uint32* init_word;
+	init_word= (uint32*) init_key;
 	int i=0;
 	for (i=0;i<4;i++){
 		round_word[i]=init_word[i];
 	}
 	for (i=4; i<44;i++) {
-		uint32_t temp_prev=round_word[i-1];
+		uint32 temp_prev=round_word[i-1];
 		if(i%4==0){
 			temp_prev=(SBoxWord(RotateWord(temp_prev)))^Rcon[i/4];
 		}

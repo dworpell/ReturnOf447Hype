@@ -12,6 +12,7 @@ add_files -tb Aes_barebones/aes_tb.c
 open_solution "solution1"
 set_part {xczu3eg-sbva484-1-e} -tool vivado
 create_clock -period 10 -name default
+config_export -format ip_catalog -rtl verilog
 #source "./Aes_barebones/solution1/directives.tcl"
 csim_design
 csynth_design
